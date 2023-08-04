@@ -22,23 +22,27 @@ $$(0,1)$$
 
 刚才我们未引入坐标基矢，引入坐标基矢后，现在就有了一种统一的形式，上述例子的完整情况为
 
-$$\left \{ \begin{matrix} 1x+0y=2 \\ 0x+1y=2 \end{matrix} \right.$$ 
+$$\left ( \begin{matrix} 1x+0y=2 \\ 0x+1y=2 \end{matrix} \right.$$ 
 
 矩阵形式
 
 $$\left ( \begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right ) \left ( \begin{matrix} x \\ y \end{matrix} \right ) = \left ( \begin{matrix} 2 \\ 2 \end{matrix} \right ) \ \ (x=2,y=2)$$
 
 其实我们可以看到，我们想要去到的那个点$(2,2)$，本质上就是我们定义的坐标基矢(i帽和j帽)<span style="color:green">"去到了"</span>点$(2,2)$,我们把这种<span style="color:green">"去到了"</span>哪里，称为**变换**
-$x=2, y=2$是满足方程的一组数，也就是**坐标基矢变化的量** 这样，每当我们看到像$\left ( \begin{matrix} 2\\2 \end{matrix} \right )$都应想起是笛卡尔坐标系中的两个**坐标基矢的变换**, 像
+$x=2, y=2$是满足方程的一组数，也就是**坐标基矢变化的量** 这样，每当我们看到像
+$$\left ( \begin{matrix} 2 \\ 2 \end{matrix} \right )$$
+都应想起是笛卡尔坐标系中的两个**坐标基矢的变换**, 像
 
-$$\left ( \begin{matrix} 1\\1 \end{matrix} \right )$$
+$$\left ( \begin{matrix} 1 \\ 1 \end{matrix} \right )$$
 
 可以看做
 
 $$\left ( \begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right ) \left ( \begin{matrix} x \\ y \end{matrix} \right ) = \left ( \begin{matrix} 1 \\ 1 \end{matrix} \right ) \ \ (x=1,y=1)$$
 
-只不过这两个坐标基没有产生任何的变化; 再如$\left ( \begin{matrix} 2\\2 \end{matrix} \right )$可以看做
+只不过这两个坐标基没有产生任何的变化; 再如
+$$\left ( \begin{matrix} 2 \\ 2 \end{matrix} \right )$$
+可以看做
 
 $$\left ( \begin{matrix} 2 & 0 \\ 0 & 2 \end{matrix} \right )$$
 
-为了便于描述，我们还通常给我们要去的$(2,2)$那个点称作**向量**，不仅有方向还有箭头，如$\vec{a}=(2,2),\ a_1=2, \ a_2=2$这是在二维的情形下
+为了便于描述，我们还通常给我们要去的$(2,2)$那个点称作**向量**，不仅有方向还有箭头，如$\vec{a}=(2,2),\quad a_1=2, \quad a_2=2$这是在二维的情形下

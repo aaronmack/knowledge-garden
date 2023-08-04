@@ -28,6 +28,6 @@
 
 回到问题，$(0,0) \rightarrow (2,2)$, 分开来看，就是先往右移动$2m$到达$p1$，再往上移动$2m$到达$p2$，设往右移动$x$个$1m$才能到达$p1$处,然后往上移动$y$个$1m$才能到达$p2$处, 则我们有
 
-$$\begin{array}{l} \left \{ \begin{matrix} 1x=2 \\ 1y=2 \end{matrix} \right.\\ \left \{ \begin{matrix} x=2\\ y=2 \end{matrix} \right. \end{array}$$ 
+$$\begin{array}{l} \left ( \begin{matrix} 1x=2 \\ 1y=2 \end{matrix} \right.\\ \left ( \begin{matrix} x=2\\ y=2 \end{matrix} \right. \end{array}$$ 
 
 往右移动$2$个$1m$才能到达$p1$处，然后往上移动$2$个$1m$才能到达$p2$处。

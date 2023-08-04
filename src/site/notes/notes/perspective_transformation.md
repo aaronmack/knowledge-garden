@@ -26,10 +26,10 @@ $$z'=\frac{10}{-10}=-1$$
 
 我们有
 
-$$\frac{BA=\textcolor{blue}{z_{blue}}=1}{EA=\textcolor{green}{z_{green}}=3}=\frac{BC=y'}{EF=y}$$ 
-$$y'=\frac{y*\textcolor{blue}{z_{blue}}}{\textcolor{green}{z_{green}}}$$
+$$\frac{BA=\color{blue}{z_{blue}}=1}{EA=\color{green}{z_{green}}=3}=\frac{BC=y'}{EF=y}$$ 
+$$y'=\frac{y*\color{blue}{z_{blue}}}{\color{green}{z_{green}}}$$
 
-其中，由于我们的摄像机是看向$-z$方向的，所以$\textcolor{green}{z_{green}}$在计算的时候前面要加$-$号，这就是式子$y'=\frac{5}{-10}=-0.5$中$z$的值为$10$，计算是为$-10$
+其中，由于我们的摄像机是看向$-z$方向的，所以$\color{green}{z_{green}}$在计算的时候前面要加$-$号，这就是式子$y'=\frac{5}{-10}=-0.5$中$z$的值为$10$，计算是为$-10$
 
 <center><img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/透视校正插值.3imenutihfe0.webp" width="490"><br><div style="color:orange; border-bottom: 1px solid #d9d9d9; display: inline-block; color: #999; padding: 2px;">Look at the projection from another aspect</div></center>
 
@@ -37,7 +37,7 @@ $$y'=\frac{y*\textcolor{blue}{z_{blue}}}{\textcolor{green}{z_{green}}}$$
 
 假设我们有一个矩阵 
 
-$$\begin{aligned} \left [ \begin{matrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1 \end{matrix}\right ] \end{aligned}$$
+$$\begin{aligned} \left [ \begin{matrix} 1&0&0&0 \\ 0&1&0&0 \\ 0&0&1&0 \\ 0&0&0&1 \end{matrix}\right ] \end{aligned}$$
 
 我们先让$z$坐标分量等于$-1$,这样计算后的$z'$就等于$1$,就可以满足如Figure 1中的
 
@@ -49,11 +49,12 @@ $$[0,0,0,1] \rightarrow [0,0,-1,0]$$
 
 这样一来,当除以$w$分量从齐次转三维中的点时，除以$w$分量相当于除以了$-z$分量，经过这样调整后我们有
 
-$$\begin{aligned} \left [ \begin{matrix} 1&0&0&0\\0&1&0&0\\0&0&-1&-1\\0&0&0&0 \end{matrix}\right ] \end{aligned}$$ 
+$$\begin{aligned} \left [ \begin{matrix} 1&0&0&0 \\ 0&1&0&0 \\ 0&0&-1&-1 \\ 0&0&0&0 \end{matrix}\right ] \end{aligned}$$ 
 
 其计算过程正好是我们想要的 
 
-$$\begin{aligned} \left \{ \begin{matrix} x'=x*1+y*0+z*0+1*0\ =x\\ y'=x*0+y*1+z*0+1*0\ =y\\ z'=x*0+y*0+z*{-1}+1*0\ ={-z}\\ w'=x*0+y*0+z*{-1}+1*0\ ={-z} \end{matrix}\right. \end{aligned}$$ 
+$$\begin{aligned} \left ( \begin{matrix} x' &= x \cdot 1 + y \cdot 0 + z \cdot 0 + 1 \cdot 0 = x \\ y' &= x \cdot 0 + y \cdot 1 + z \cdot 0 + 1 \cdot 0 = y \\ z' &= x \cdot 0 + y \cdot 0 + z \cdot (-1) + 1 \cdot 0 = -z \\ w' &= x \cdot 0 + y \cdot 0 + z \cdot (-1) + 1 \cdot 0 = -z \end{matrix} \right . \end{aligned}
+$$
 
 $$\begin{array}{ll} x' = \dfrac{x'=x}{w'=-z},\\ y' = \dfrac{y'=y}{w'=-z},\\ z' = \dfrac{z'=-z}{w'=-z} = 1. \end{array}$$ 
 
@@ -71,7 +72,7 @@ $$(x', y', z') = (x/w, y/w, z/w)$$
 
 其中$x$和$y$对$z$无影响)，则上一步骤中的矩阵可以设为
 
-$$\left[\begin{array}{cccc} { \frac{2n}{ r-l } } & 0 & 0 & 0 \\ 0 & { \frac{2n}{ t-b } } & 0 & 0 \\ { \frac{r + l}{ r-l } } & { \frac{t + b}{ t-b } } & \textcolor{red}{A} & {-1}\\ 0 & 0 & \textcolor{red}{B} & 0\\ \end{array}\right]$$ 
+$$\left[\begin{array}{cccc} { \frac{2n}{ r-l } } & 0 & 0 & 0 \\ 0 & { \frac{2n}{ t-b } } & 0 & 0 \\ { \frac{r + l}{ r-l } } & { \frac{t + b}{ t-b } } & \color{red}{A} & {-1}\\ 0 & 0 & \color{red}{B} & 0\\ \end{array}\right]$$ 
 
 其中<span style="color:red">A</span>和<span style="color:red">B</span>是我们要求的,则可以列出等式
 
@@ -79,8 +80,8 @@ $$z' = \dfrac{0 * x + 0 * y + A * z + B * w}{w = -z} \rightarrow \dfrac{A z + B}
 
 **注意这里的$w=1$是$(x,y,z,w=1)$中的$w$，而不是这个矩阵中的$w$分量**<br>再根据我们已知$z$正好落在$near$近平面时应当等于$-1$，正好落在$far$远平面时应当等于$1$, 我们可以列出式子
 
-$$\left\{ \begin{array}{ll} \dfrac{(z=-n)A + B}{(-z=-(-n)=n)} = -1 &\text{ when } z = n\\ \\ \dfrac{(z=-f)A + B}{(-z=-(-f)=f)} = 1 & \text{ when } z = f \end{array} \right. $$ 
-$$ \rightarrow  \left\{ \begin{array}{ll} {-nA + B} = -n & (1)\\  {-fA + B} = f & (2) \end{array} \right.$$ 
+$$\left ( \begin{array}{ll} \dfrac{(z=-n)A + B}{(-z=-(-n)=n)} = -1 &\text{ when } z = n\\ \\ \dfrac{(z=-f)A + B}{(-z=-(-f)=f)} = 1 & \text{ when } z = f \end{array} \right. $$ 
+$$ \rightarrow  \left ( \begin{array}{ll} {-nA + B} = -n & (1)\\  {-fA + B} = f & (2) \end{array} \right.$$ 
 
 $$ A=-\frac{f+n}{f-n} $$ 
 
@@ -102,7 +103,7 @@ $$ B=-\frac{2fn}{f-n} $$
 将原来透视矩阵中的$(0,0,0,1)$变为$(0,0,-1,0)$之后, 就说当我们用这个透视矩阵的$w$分量乘以一个齐次点
 $$(x,y,z,1)$$
 时，我们有
-$$x*0+y*0+z*-1+1*0 = -z$$
+$$x \cdot 0 + y \cdot 0+z \cdot -1+1 \cdot 0 = -z$$
 也就是说，这个齐次点$w$的值经过矩阵计算之后从之前的$1$变为了$-z$,同时，齐次点$(x,y,z)$变为三维点时需要经过$(x/w, y/w, z/w)$，此时这样就有
 $$(x/w, y/w, z/w) \Rightarrow (x/{-z}, y/{-z}, z/{-z})$$
 
@@ -120,11 +121,13 @@ $$\begin{aligned} M_{persp} = \left [ \begin{matrix} \frac{2n}{r-l} & 0 & \frac{
 或 
 $$\begin{aligned} M_{persp} = \left [ \begin{matrix} \frac{2n}{r-l} & 0 & 0 & 0 \\ 0 & \frac{2n}{t-b} & 0 & 0 \\ \frac{r+l}{r-l} & \frac{t+b}{t-b} & -\frac{f+n}{f-n} & -1 \\ 0 & 0 & -\frac{2nf}{n-f} & 0 \end{matrix}\right ] \end{aligned}$$ 
 
-<center>(注意其中两者之间的负号)</center><br>则我们有
+<center>(注意其中两者之间的负号)</center><br>
 
-$$[x', y', z', w'] = \left [ \begin{matrix} x\\y\\z\\w=1 \end{matrix} \right ] * M_{persp}$$ 
+则我们有
+
+$$[x', y', z', w'] = \left [ \begin{matrix} x \\ y \\ z \\ w=1 \end{matrix} \right ] * M_{persp}$$ 
 其中
-$$w'=0*x + 0*y - 1*z + 0*1 = -z$$
+$$w'=0 \cdot x + 0 \cdot y - 1 \cdot z + 0 \cdot 1 = -z$$
 
 计算并验证一下，假设$n=1，f=20$公式
 

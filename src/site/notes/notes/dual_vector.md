@@ -8,10 +8,10 @@ $$(a_1,a_2\cdots a_n)$$
 
 它既可以理解为**行向量**,也可理解为某种**映射**,该映射把给定的$n$维**列向量**
 
-$$\left ( \begin{matrix} b_1\\b_2 \\ \cdots \\ b_n \end{matrix}\right )$$
+$$\left ( \begin{matrix} b_1 \\ b_2 \\ \cdots \\ b_n \end{matrix}\right )$$
 
 (矢量)映射为实数$k$, 
 
 $$k=a_1b_1+a_2b_2+\cdots+a_nb_n$$
 
-即矩阵的乘积。则这个映射满足对偶矢量的定义,因此行向量$(a_1,a_2\cdots a_n)$是矢量$\left ( \begin{matrix} b_1\\b_2 \\ \cdots \\ b_n \end{matrix}\right )$的对偶矢量。
+即矩阵的乘积。则这个映射满足对偶矢量的定义,因此行向量$(a_1,a_2\cdots a_n)$是矢量$\left ( \begin{matrix} b_1 \\ b_2 \\ \cdots \\ b_n \end{matrix}\right )$的对偶矢量。

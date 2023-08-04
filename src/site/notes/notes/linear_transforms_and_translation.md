@@ -46,7 +46,7 @@ $$\left ( \begin{matrix} x'\\ y' \end{matrix} \right ) = \left ( \begin{matrix} 
 
 **旋转Rotate**<div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/手绘-Rotate.3lljascgw0k0.webp" width="790"></div>
 
-$$\mathbf{R}_\theta = \left ( \begin{matrix} \textcolor{teal}{cos\theta} & \textcolor{black}{-sin\theta} \\  \textcolor{teal}{sin\theta} & \textcolor{black}{cos\theta} \end{matrix} \right )$$
+$$\mathbf{R}_\theta = \left ( \begin{matrix} \color{teal}{cos\theta} & \color{black}{-sin\theta} \\  \color{teal}{sin\theta} & \color{black}{cos\theta} \end{matrix} \right )$$
 
   
 
@@ -76,6 +76,23 @@ $$\left ( \begin{matrix} t_x\\ t_y \end{matrix} \right )$$
 **变换复合**
 
 [[notes/complex_transformation\|notes/complex_transformation]]变换复合，很容易就理解
-$$\mathbf{T}_{(1,0)}\mathbf{R}_{45^\circ} = \left ( \begin{matrix} 1&0&1\\ 0&1&0\\0&0&1 \end{matrix} \right ) \left ( \begin{matrix} cos45^\circ &-sin45^\circ &0\\ sin45^\circ & cos45^\circ &0\\0&0&1 \end{matrix} \right )$$
+
+$$
+\mathbf{T} \quad
+\mathbf{R} = 
+\left ( 
+\begin{matrix} 1 & 0 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 
+\end{matrix} 
+\right ) 
+\left ( 
+\begin{matrix} \cos45^\circ & -\sin45^\circ & 0 \\ \sin45^\circ & \cos45^\circ & 0 \\ 0 & 0 & 1 
+\end{matrix} 
+\right )
+$$
+
+Here[^1]
+
 3维下
-$$\left ( \begin{matrix} x'\\ y' \\z'\\1 \end{matrix} \right ) = \left ( \begin{matrix} 1&0&0&t_x\\ 0&1&0&t_y\\0&0&1&t_z \\0&0&0&1 \end{matrix} \right ) \left ( \begin{matrix} x\\ y\\z\\1 \end{matrix} \right ) = \left ( \begin{matrix} x+t_x\\ y+t_y\\ z+t_z\\1 \end{matrix} \right )$$
+$$\left ( \begin{matrix} x' \\ y' \\ z' \\ 1 \end{matrix} \right ) = \left ( \begin{matrix} 1&0&0&t_x \\ 0&1&0&t_y \\ 0&0&1&t_z \\ 0&0&0&1 \end{matrix} \right ) \left ( \begin{matrix} x \\ y \\ z \\ 1 \end{matrix} \right ) = \left ( \begin{matrix} x+t_x \\ y+t_y \\ z+t_z \\ 1 \end{matrix} \right )$$
+
+[^1]: For math render, we use `\mathbf{T}\_{x} ` instead of `\mathbf{T}_{x} `, But some doesn't support.
