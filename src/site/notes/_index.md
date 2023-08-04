@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/index/","title":"Knowledge","tags":["gardenEntry"]}
+{"dg-publish":true,"permalink":"/index/","title":"Knowledge","tags":["gardenEntry"],"noteIcon":"","created":"","updated":""}
 ---
 
 
@@ -13,6 +13,3 @@ Favor
 > [[notes/barycentric_coordinates\|notes/barycentric_coordinates]]
 > 
 > [[notes/space_and_transformation\|notes/space_and_transformation]]
-
-
-$$a_1$$
