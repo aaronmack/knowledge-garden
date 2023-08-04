@@ -2,65 +2,33 @@
 {"dg-publish":true,"permalink":"/notes/equation-and-determinant/","title":"Equation and determinant","noteIcon":"","created":"","updated":""}
 ---
 
+**方程与行列式**
 
 有一个方程，我们试着解一下
 
-$$
-\begin{array}{l} \left \{ \begin{matrix}  5x+6y=7 \ \ (1) \\ 9x+4y=3 \ \ (2) \end{matrix} \right. \end{array}
-$$我们用消去法
-$$
-
-\begin{array}{l} (2) \times \frac{5}{9} - (1) \\ (1)\times \frac{4}{6} - (2) \end{array}
-
-$$最终可以得到
-$$
-
-\begin{array}{l} y(5\times 4-6\times 9)=3\times 5-7\times 9 \\ x(5\times 4-6\times 9)=7\times 4-6\times 3 \end{array}
-
-$$
+$$\begin{array}{l} \left \{ \begin{matrix}  5x+6y=7 \ \ (1) \\ 9x+4y=3 \ \ (2) \end{matrix} \right. \end{array}$$
+我们用消去法
+$$\begin{array}{l} (2) \times \frac{5}{9} - (1) \\ (1)\times \frac{4}{6} - (2) \end{array}$$
+最终可以得到
+$$\begin{array}{l} y(5\times 4-6\times 9)=3\times 5-7\times 9 \\ x(5\times 4-6\times 9)=7\times 4-6\times 3 \end{array}$$
 
 大家有没有注意到$x$和$y$后面的
-$$
-
-(5\times 4-6\times 9)  
-
-$$他们是一样的，所以为了简化计算，我们将这个$(5\times 4-6\times 9)$拿出来排列成$$
-
 $$(5\times 4-6\times 9)$$
-
-他们是一样的，所以为了简化计算，我们将这个$(5\times 4-6\times 9)$拿出来排列成\left ( \begin{matrix} 5 & 6 \\ 9 & 4 \end{matrix} \right )  
-
-$$(5\times 4-6\times 9)$$
-
-他们是一样的，所以为了简化计算，我们将这个$(5\times 4-6\times 9)$拿出来排列成$$这样一组数,再定义
-
-$$
-\left ( \begin{matrix} 5 & 6 \\ 9 & 4 \end{matrix} \right ) = 5\times 4 - 6\times 9
-$$叫做**行列式**, 而
-$$
-
-\left ( \begin{matrix} 5 & 6 \\ 9 & 4 \end{matrix} \right )
-
-$$也是方程中的系数(称作**系数矩阵**)，通用格式就是
-$$
-
-\left ( \begin{matrix} a&b \\ c&d \end{matrix} \right ) = ad-bc
-
-$$
+他们是一样的，所以为了简化计算，我们将这个$(5\times 4-6\times 9)$拿出来排列成
+$$\left ( \begin{matrix} 5 & 6 \\ 9 & 4 \end{matrix} \right ) $$
+这样一组数,再定义
+$$\left ( \begin{matrix} 5 & 6 \\ 9 & 4 \end{matrix} \right ) = 5\times 4 - 6\times 9$$
+叫做**行列式**, 而
+$$\left ( \begin{matrix} 5 & 6 \\ 9 & 4 \end{matrix} \right ) $$
+也是方程中的系数(称作**系数矩阵**)，通用格式就是
+$$\left ( \begin{matrix} a&b \\ c&d \end{matrix} \right ) = ad-bc$$
 
 ---
 
 再看另外一个方程
-$$
-
-\left \{ \begin{matrix} 1x+0y=0 \\ 0x+1y=0 \end{matrix} \right.
-
-$$ 列出系数矩阵形式
-$$
-
-\left ( \begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right )
-
-$$
+$$\left \{ \begin{matrix}  1x+0y=0 \\ 0x+1y=0 \end{matrix} \right.$$ 
+列出系数矩阵形式
+$$\left ( \begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right )$$
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/手绘二维坐标系.qt5rv7k809s.webp" width="490"></div>
 

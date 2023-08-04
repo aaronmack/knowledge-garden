@@ -16,17 +16,18 @@ $$(2,5,10)$$
 
 应用计算之后是
 
-$$x'=\frac{2}{-10}=-0.2$$ $$y'=\frac{5}{-10}=-0.5$$
-
+$$x'=\frac{2}{-10}=-0.2$$ 
+$$y'=\frac{5}{-10}=-0.5$$
 $$z'=\frac{10}{-10}=-1$$ 
 
 那么这个计算过程是如何进行的呢？根据相似三角形
 
-<center><img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/projection.5bbo6m777gs0.webp"><br><div style="color:orange; border-bottom: 1px solid #d9d9d9; display: inline-block; color: #999; padding: 2px;">Figure5.1 (从$P$投射到$P'$)</div></center>
+<center><img style="border-radius: 0.3125em; box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/projection.5bbo6m777gs0.webp"><br><div style="color:orange; border-bottom: 1px solid #d9d9d9; display: inline-block; color: #999; padding: 2px;">Figure 1 (从P投射到P')</div></center>
 
 我们有
 
-$$\frac{BA=\textcolor{blue}{z_{blue}}=1}{EA=\textcolor{green}{z_{green}}=3}=\frac{BC=y'}{EF=y}$$ $$y'=\frac{y*\textcolor{blue}{z_{blue}}}{\textcolor{green}{z_{green}}}$$
+$$\frac{BA=\textcolor{blue}{z_{blue}}=1}{EA=\textcolor{green}{z_{green}}=3}=\frac{BC=y'}{EF=y}$$ 
+$$y'=\frac{y*\textcolor{blue}{z_{blue}}}{\textcolor{green}{z_{green}}}$$
 
 其中，由于我们的摄像机是看向$-z$方向的，所以$\textcolor{green}{z_{green}}$在计算的时候前面要加$-$号，这就是式子$y'=\frac{5}{-10}=-0.5$中$z$的值为$10$，计算是为$-10$
 
@@ -38,7 +39,7 @@ $$\frac{BA=\textcolor{blue}{z_{blue}}=1}{EA=\textcolor{green}{z_{green}}=3}=\fra
 
 $$\begin{aligned} \left [ \begin{matrix} 1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1 \end{matrix}\right ] \end{aligned}$$
 
-我们先让$z$坐标分量等于$-1$,这样计算后的$z'$就等于$1$,就可以满足如Figure5.1中的
+我们先让$z$坐标分量等于$-1$,这样计算后的$z'$就等于$1$,就可以满足如Figure 1中的
 
 $$z'=z=1$$
 
@@ -83,7 +84,8 @@ $$ \rightarrow  \left\{ \begin{array}{ll} {-nA + B} = -n & (1)\\  {-fA + B} = 
 
 $$ A=-\frac{f+n}{f-n} $$ 
 
-$$ B=-\frac{2fn}{f-n} $$ (也可以映射到[0,1]范围内)
+$$ B=-\frac{2fn}{f-n} $$ 
+(也可以映射到[0,1]范围内)
 
 **补充资料**
 
@@ -97,21 +99,32 @@ $$ B=-\frac{2fn}{f-n} $$ (也可以映射到[0,1]范围内)
 
 链接: https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/building-basic-perspective-projection-matrix
 
-将原来透视矩阵中的$(0,0,0,1)$变为$(0,0,-1,0)$之后, 就说当我们用这个透视矩阵的$w$分量乘以一个齐次点$$(x,y,z,1)$$时，我们有$$x*0+y*0+z*-1+1*0 = -z$$也就是说，这个齐次点$w$的值经过矩阵计算之后从之前的$1$变为了$-z$,同时，齐次点$(x,y,z)$变为三维点时需要经过$(x/w, y/w, z/w)$，此时这样就有$$(x/w, y/w, z/w) \Rightarrow (x/{-z}, y/{-z}, z/{-z})$$
+将原来透视矩阵中的$(0,0,0,1)$变为$(0,0,-1,0)$之后, 就说当我们用这个透视矩阵的$w$分量乘以一个齐次点
+$$(x,y,z,1)$$
+时，我们有
+$$x*0+y*0+z*-1+1*0 = -z$$
+也就是说，这个齐次点$w$的值经过矩阵计算之后从之前的$1$变为了$-z$,同时，齐次点$(x,y,z)$变为三维点时需要经过$(x/w, y/w, z/w)$，此时这样就有
+$$(x/w, y/w, z/w) \Rightarrow (x/{-z}, y/{-z}, z/{-z})$$
 
 4. 关于透视矩阵中的$z$项的$-1$
 
 链接: https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/building-basic-perspective-projection-matrix
 
-因为摄像机是朝向$-z$方向的，所以摄像机前所有的点的$z$坐标都是负的，这就是为什么【资料1】中$$x' = \frac{x}{-z}$$中的$z$前方带有负号
+因为摄像机是朝向$-z$方向的，所以摄像机前所有的点的$z$坐标都是负的，这就是为什么【资料1】中
+$$x' = \frac{x}{-z}$$
+中的$z$前方带有负号
 
 **透视变换矩阵**
 
-$$\begin{aligned} M_{persp} = \left [ \begin{matrix} \frac{2n}{r-l} & 0 & \frac{l+r}{l-r} & 0 \\ 0 & \frac{2n}{t-b} & \frac{b+t}{b-t} & 0 \\ 0 & 0 & \frac{f+n}{f-n} & \frac{2nf}{n-f} \\ 0 & 0 & 1 & 0 \end{matrix}\right ] \end{aligned}$$ 或 $$\begin{aligned} M_{persp} = \left [ \begin{matrix} \frac{2n}{r-l} & 0 & 0 & 0 \\ 0 & \frac{2n}{t-b} & 0 & 0 \\ \frac{r+l}{r-l} & \frac{t+b}{t-b} & -\frac{f+n}{f-n} & -1 \\ 0 & 0 & -\frac{2nf}{n-f} & 0 \end{matrix}\right ] \end{aligned}$$ 
+$$\begin{aligned} M_{persp} = \left [ \begin{matrix} \frac{2n}{r-l} & 0 & \frac{l+r}{l-r} & 0 \\ 0 & \frac{2n}{t-b} & \frac{b+t}{b-t} & 0 \\ 0 & 0 & \frac{f+n}{f-n} & \frac{2nf}{n-f} \\ 0 & 0 & 1 & 0 \end{matrix}\right ] \end{aligned}$$ 
+或 
+$$\begin{aligned} M_{persp} = \left [ \begin{matrix} \frac{2n}{r-l} & 0 & 0 & 0 \\ 0 & \frac{2n}{t-b} & 0 & 0 \\ \frac{r+l}{r-l} & \frac{t+b}{t-b} & -\frac{f+n}{f-n} & -1 \\ 0 & 0 & -\frac{2nf}{n-f} & 0 \end{matrix}\right ] \end{aligned}$$ 
 
 <center>(注意其中两者之间的负号)</center><br>则我们有
 
-$$[x', y', z', w'] = \left [ \begin{matrix} x\\y\\z\\w=1 \end{matrix} \right ] * M_{persp}$$ 其中$$w'=0*x + 0*y - 1*z + 0*1 = -z$$
+$$[x', y', z', w'] = \left [ \begin{matrix} x\\y\\z\\w=1 \end{matrix} \right ] * M_{persp}$$ 
+其中
+$$w'=0*x + 0*y - 1*z + 0*1 = -z$$
 
 计算并验证一下，假设$n=1，f=20$公式
 
@@ -123,6 +136,10 @@ $$\frac{-\frac{21}{19} * z - \frac{40}{19}}{-z}$$
 
 其中$\frac{-21}{19}=-1.1$和$\frac{-40}{19}=-2.1$则得到结果
 
-$$z=1 \rightarrow \frac{-1.1*1 -2.1}{-1} = 3.2$$ $$z=-1 \rightarrow \frac{-1.1*-1 -2.1}{1} = -1$$ 
+$$z=1 \rightarrow \frac{-1.1*1 -2.1}{-1} = 3.2$$ 
 
-$$z=-20 \rightarrow \frac{-1.1*-20 -2.1}{20} = 0.995$$ $$z=-21 \rightarrow \frac{-1.1*-21 -2.1}{21} = 1.1$$
+$$z=-1 \rightarrow \frac{-1.1*-1 -2.1}{1} = -1$$ 
+
+$$z=-20 \rightarrow \frac{-1.1*-20 -2.1}{20} = 0.995$$ 
+
+$$z=-21 \rightarrow \frac{-1.1*-21 -2.1}{21} = 1.1$$

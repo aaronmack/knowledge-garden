@@ -5,9 +5,18 @@
 **坐标基矢**
 
 坐标基矢是我们人为定义的事物；一维情形下就是数轴上$0$到$1$之间那个距离，记为
-$$(1,)$$二维有两个坐标轴，分别为
-$$(1,0)$$ 叫做$i$帽，符号记为$\hat{i}$和
-$$(0,1)$$叫做$j$帽，符号记为 $\hat{j}$ 
+
+$$(1,)$$
+
+二维有两个坐标轴，分别为
+
+$$(1,0)$$
+
+叫做$i$帽，符号记为$\hat{i}$和
+
+$$(0,1)$$
+
+叫做$j$帽，符号记为 $\hat{j}$ 
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/手绘坐标基.2pvxzz9z2es0.webp" width="790"></div>
 

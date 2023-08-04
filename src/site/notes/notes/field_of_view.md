@@ -10,4 +10,15 @@
 
 **计算**<div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/FOV-image.5ljfnjoc8mc0.webp"></div>
 
-根据三角函数$$\begin{array}{l} \tan( \dfrac{ FOV } {2}) = \dfrac{ opposite } { adjacent } = \dfrac {BC}{AB} = \dfrac{top}{near} \\ top = \tan( \dfrac{ FOV } {2}) * near \\ bottom = -top \end{array}$$如果我们的$aspect\ ratio$(宽高比)为$1$的话，则$$\begin{array}{l} right = top\\ left = bottom = -top \end{array}$$但通常我们的屏幕的宽高比都不是$1:1$的，如<div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/AspectRation.3dftg4ztsu00.webp"></div>图中右边所示，我们有公式$$\frac{width}{height}=\frac{right}{top}$$ $$\frac{width}{height}=\frac{left}{bottom}$$ (宽与左右对应，高与上下对应) 则我们有$$\begin{array}{l} right = top * aspect\ ratio \\ left = bottom * aspect\ ratio \end{array}$$其中$$aspect\ ratio = \frac{width}{height}$$ $$bottom = -top$$
+根据三角函数
+$$\begin{array}{l} \tan( \dfrac{ FOV } {2}) = \dfrac{ opposite } { adjacent } = \dfrac {BC}{AB} = \dfrac{top}{near} \\ top = \tan( \dfrac{ FOV } {2}) * near \\ bottom = -top \end{array}$$
+如果我们的$aspect\ ratio$(宽高比)为$1$的话，则
+$$\begin{array}{l} right = top\\ left = bottom = -top \end{array}$$
+但通常我们的屏幕的宽高比都不是$1:1$的，如<div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/AspectRation.3dftg4ztsu00.webp"></div>图中右边所示，我们有公式
+$$\frac{width}{height}=\frac{right}{top}$$ 
+$$\frac{width}{height}=\frac{left}{bottom}$$ 
+(宽与左右对应，高与上下对应) 则我们有
+$$\begin{array}{l} right = top * aspect\ ratio \\ left = bottom * aspect\ ratio \end{array}$$
+其中
+$$aspect\ ratio = \frac{width}{height}$$ 
+$$bottom = -top$$
