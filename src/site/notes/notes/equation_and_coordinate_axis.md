@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/equation-and-coordinate-axis/","title":"Equation and coordinate axis","noteIcon":"","created":"","updated":""}
 ---
 
+
 我们从方程出发，知道了行列式这么一个家伙，下面再来看看方程是什么，方程中的**等号**是问题的核心
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/手绘一维坐标轴.2fvv0l7brt7o.webp" width="590"></div>

@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/perspective-transformation/","title":"Perspective transformation","noteIcon":"","created":"","updated":""}
 ---
 
+
 **透视变换Perspective Transformation**
 
 什么是透视变换？[图片](https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/Perspective.4ihgtm58l9u0.webp) 透视变换是一个投影过程，其中透视变换就像将人的眼睛当做一个中心点，外部世界是一个大平面，在眼睛与这个平面之间形成一个椎体，然后将这个平面上的内容投射到眼睛内。

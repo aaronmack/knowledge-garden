@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/equation-and-determinant/","title":"Equation and determinant","noteIcon":"","created":"","updated":""}
 ---
 
+
 **方程与行列式**
 
 有一个方程，我们试着解一下

@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/cross-product/","title":"Cross product","noteIcon":"","created":"","updated":""}
 ---
 
+
 叉乘只在三维中有定义，<span style="color:purple">两个向量的叉乘可以产生一个与这两个向量都垂直的新向量</span>。例如计算一个物体表面的法向量
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/叉乘.1eb9eyex849s.webp" width="290"></div>

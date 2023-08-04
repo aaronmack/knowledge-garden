@@ -1,6 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/notes/dot-product/","title":"Dot product","noteIcon":"","created":"","updated":"","katex":true,"markup":'mmark'}
+{"dg-publish":true,"permalink":"/notes/dot-product/","title":"Dot product","noteIcon":"","created":"","updated":""}
 ---
+
 
 点乘我们通常用于衡量两个向量的方向差，或者衡量"做功"的大小，通常我们将它们单位化，然后再计算，这样取值范围就在$-1$到$1$之间，例如两个向量共向，那么值为$1$，反向则为$-1$，垂直为$0$
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/点乘.78lv308m6p80.webp" width="290"></div>
