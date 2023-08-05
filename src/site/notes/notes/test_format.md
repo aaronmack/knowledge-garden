@@ -5,7 +5,7 @@
 
 >
 ## Math
-> [!warning] Warning
+> [!INFO] INFO
 > 
 > Test 
 > $$\int_{a}^{b} x^2 dx$$
@@ -22,30 +22,23 @@
 
 ---
 $$
-f(n) =
-\begin{cases} 
-n/2,  & \text{if }n\text{ is even} \\\\
-3n+1, & \text{if }n\text{ is odd}
-\end{cases}
-$$
----
-$$
-\sum_{k=1}^N k^2
-$$
----
-$$
 \sum^N_{k=1} \color{Lavender}{k^2}
+$$
+$$
+\sum^N_{k=1} \color{green}{k^2}
 $$
 ---
 > [!NOTE]
 > 
->  Hugo: the color not supported. `Lavender`
+>  Hugo: the color not supported. `Lavender`, Ok with `green`
 >  
 >  Obsidian: Supported.
 > 
 >  DG: Supported. [GitHub - oleeskild/digitalgarden](https://github.com/oleeskild/digitalgarden)
 
 ---
+
+* Should display error or not rendered
 
 $$
 \left\{\begin{aligned}
@@ -54,77 +47,75 @@ $$
 -6x + 3y + 2z
 \end{aligned}\right.
 $$
-
 $$
-\left(\begin{aligned}
+\left\lbrace\begin{aligned}
 3x + 5y +  z \\\\
 7x - 2y + 4z \\\\
 -6x + 3y + 2z
 \end{aligned}\right.
 $$
 
-$$
-\left\lbrace \dfrac ab \right.
-$$
-> [!WARNING] 
+> [!WARNING]  
 > 
 > Hugo: Not supported.  `\left\{`, Can use `\left(` or `\left\lbrace`
 
 ---
+
 $$
-\begin{alignedat}{3}
-f(x) & = (m-n)^2 \\\\
-f(x) & = (-m+n)^2 \\\\
-     & = m^2-2mn+n^2 \\\\
-\end{alignedat}
+  \begin{array}{c|cccc}
+  \text{min} & 0 & 1 & 2 & 3\\
+  \hline
+  0 & 0 & 0 & 0 & 0\\
+  1 & 0 & 1 & 1 & 1\\
+  2 & 0 & 1 & 2 & 2\\
+  3 & 0 & 1 & 2 & 3
+  \end{array}
 $$
 ---
 
 $$
-% outer vertical array of arrays
+% outer vertical array of arrays 外层垂直表格
 \begin{array}{c}
-    % inner horizontal array of arrays
+    % inner horizontal array of arrays 内层水平表格
     \begin{array}{cc}
-        % inner array of minimum values
+        % inner array of minimum values 内层"最小值"数组
         \begin{array}{c|cccc}
-        \text{min} & 0 & 1 & 2 & 3\\\\
+        \text{min} & 0 & 1 & 2 & 3\\
         \hline
-        0 & 0 & 0 & 0 & 0\\\\
-        1 & 0 & 1 & 1 & 1\\\\
-        2 & 0 & 1 & 2 & 2\\\\
+        0 & 0 & 0 & 0 & 0\\
+        1 & 0 & 1 & 1 & 1\\
+        2 & 0 & 1 & 2 & 2\\
         3 & 0 & 1 & 2 & 3
         \end{array}
     &
-        % inner array of maximum values
+        % inner array of maximum values 内层"最大值"数组
         \begin{array}{c|cccc}
-        \text{max}&0&1&2&3\\\\
+        \text{max}&0&1&2&3\\
         \hline
-        0 & 0 & 1 & 2 & 3\\\\
-        1 & 1 & 1 & 2 & 3\\\\
-        2 & 2 & 2 & 2 & 3\\\\
+        0 & 0 & 1 & 2 & 3\\
+        1 & 1 & 1 & 2 & 3\\
+        2 & 2 & 2 & 2 & 3\\
         3 & 3 & 3 & 3 & 3
         \end{array}
     \end{array}
-    %
-    \\\\
-    % inner array of delta values
+    % 内层第一行表格组结束
+    \\
+    % inner array of delta values 内层第二行Delta值数组
         \begin{array}{c|cccc}
-        \Delta&0&1&2&3\\\\
+        \Delta&0&1&2&3\\
         \hline
-        0 & 0 & 1 & 2 & 3\\\\
-        1 & 1 & 0 & 1 & 2\\\\
-        2 & 2 & 1 & 0 & 1\\\\
+        0 & 0 & 1 & 2 & 3\\
+        1 & 1 & 0 & 1 & 2\\
+        2 & 2 & 1 & 0 & 1\\
         3 & 3 & 2 & 1 & 0
         \end{array}
-        %
+        % 内层第二行表格组结束
 \end{array}
 $$
 
 
----
-$$
-\mathbf{STUVWXYZ}
-$$
+
+> [!WARNING] Please use `\\` instead of `\\\\`
 
 ## Code 
 
@@ -137,41 +128,23 @@ print("A message")
 ## Other
 
 > [!FAQ]- Closed by default
+> 
 > Folding/Collapsable callout
 
 
 > [!NOTE]+ Open by default
+> 
 > Folding/Collapsable callout
+> 
+> A new line is required between the label and the content to be used correctly in Hugo
 
 ## MathJax / LaTex
 
 [MathJax basic tutorial and quick reference](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
-$$
-\begin{array}{c|lcr}
-n & \text{Left} & \text{Center} & \text{Right} \\
-\hline
-1 & 0.24 & 1 & 125 \\
-2 & -1 & 189 & -8 \\
-3 & -20 & 2000 & 1+10i
-\end{array}
-$$
-
 Inline $\sqrt{\mathstrut a} - \sqrt{\mathstrut b}$ formula
 
-$$
-\begin{array}{rrrrrrr|rr}
-      & x_1 & x_2 & s_1 & s_2 & s_3 &  w &    & \text{ratio} \\ \hline
-  s_1 &   0 &   1 &   1 &   0 &   0 &  0 &  8 &            - \\
-    w & 1^* &  -1 &   0 &  -1 &   0 &  1 &  4 &            4 \\
-  s_3 &   1 &   1 &   0 &   0 &   1 &  0 & 12 &           12 \\ \hdashline
-      &   1 &  -1 &   0 &  -1 &   0 &  0 &  4 &              \\ \hline
-  s_1 &   0 &   1 &   1 &   0 &   0 &  0 &  8 &              \\
-  x_1 &   1 &  -1 &   0 &  -1 &   0 &  1 &  4 &              \\
-  s_3 &   0 &   2 &   0 &   2 &   1 & -1 &  8 &              \\ \hdashline
-      &   0 &   0 &   0 &   0 &   0 & -1 &  0 &
-\end{array}
-$$
+* Should display error
 
 $$
 f\left(
@@ -188,37 +161,35 @@ f\left(
 \right)
 $$
 
+$$
+f\left(
+   \left[ 
+     \frac{1+\left\lbrace x,y\right\rbrace }{\left(\frac{x}{y}+\frac{y}{x}\right)
+\left(u+1\right)}
++a
+   \right]^{3/2}
+\right)
+$$
+> [!WARNING] Please use `\left\(` or `\left\lbrace` instead of `\left\{`
+
+
 ---
 
 $$0.414213562373095048\approx6\*16^{-1}+a\*16^{-2}+0\*16^{-3}+\cdots$$
 
+* Should not displayed
+
 $$0.414213562373095048\approx6*16^{-1}+a*16^{-2}+0*16^{-3}+\cdots$$
 
-> [!WARNING] 
+$$0.414213562373095048\approx6\ast16^{-1}+a\ast16^{-2}+0\ast16^{-3}+\cdots$$
+
+> [!WARNING] Please use `\ast` instead of `\*`, when there have many `***` in the formula, the formula will not render.
 > 
-> Hugo:  Supported.
+> Hugo:  Supported. 
 > 
 > DG: some error. `\*`
 > 
 > Obsidian: same as DG `\*`
-
----
-$$
-\begin{equation}
-\begin{split}
-(a + b)^3
-&= (a + b)(a + b)^2            \\
-&= (a + b)(a^2 + 2ab + b^2)    \\
-&= a^3 + 3a^2b + 3ab^2 + b^3
-\end{split}
-\end{equation}
-$$
-
----
-$$\boldsymbol{x}$$
-
----
-$$\boldsymbol{x}_{i+1}$$
 
 ---
 
@@ -227,15 +198,19 @@ $$
 $$
 
 ---
+
+* Should not displayed
+
 $$\boldsymbol{x}_{i+1}+\boldsymbol{x}_{i+2}=\boldsymbol{x}_{i+3}$$
 
----
-> [!WARNING] 
-> 
-> Hugo: More than three pairs of braces appear and cannot be displayed
+$$\boldsymbol{x}\_{i+1}+\boldsymbol{x}\_{i+2}=\boldsymbol{x}\_{i+3}$$
 
 ---
-$$ \begin{align*} y = y(x,t) &= A e^{i\theta} \\ &= A (\cos \theta + i \sin \theta) \\ &= A (\cos(kx - \omega t) + i \sin(kx - \omega t)) \\ &= A\cos \frac{2\pi}{\lambda} (x - v t) + i A\sin \frac{2\pi}{\lambda} (x - v t) \end{align*} $$
+> [!WARNING] You must replace `_` to `\_`
+> 
+> Hugo: The real reason is `_` , Otherwise this formula will not render.
+
+---
 
 ## Misc
 
@@ -259,7 +234,6 @@ $$ \begin{align*} y = y(x,t) &= A e^{i\theta} \\ &= A (\cos \theta + i \sin \the
 
 $$
 \begin{cases}
-
 \sqsubseteq  \\
 {\displaystyle \color {Periwinkle}{\text{Periwinkle}}} \\
 {\color{Blue}x^2}+{\color{Brown}2x} - {\color{OliveGreen}1} \\
@@ -279,6 +253,8 @@ $$
 \end{cases}
 $$
 
+>[!WARNING] When space  ` `  shown in this formula, that will not render.
+
 ---
 $$f(n) =
 \begin{cases} 
@@ -287,8 +263,6 @@ n/2,  & \text{if }n\text{ is even} \\\\
 \end{cases}$$
 
 ---
-
-
 
 $$
 \begin{array}{cc}
@@ -326,12 +300,22 @@ $$
 $$
 
 ---
+
+* Do not understand why a new page can be rendered, or delete the space and line feed can be rendered
+
 $$
-x = a_0 + \cfrac{1^2}{a_1
-          + \cfrac{2^2}{a_2
-          + \cfrac{3^2}{a_3 + \cfrac{4^4}{a_4 + \cdots}}}}
+\left\langle  
+q 
+\middle\|
+  \frac{\frac{x}{y}}{\frac{u}{v}}
+\middle| 
+p 
+\right\rangle
 $$
 
+---
+
+<div style="color: green">
 $$
 \left\langle  
   q
@@ -341,3 +325,11 @@ $$
    p 
 \right\rangle
 $$
+</div>
+
+> [!INFO]
+> 
+> Hugo: Support on MathJax, And use `mathj:true`. But sometimes not displayed. Or use `<div></div>`
+
+
+<h4>After testing for half a day, I found that the default rendering is the best</h4>
