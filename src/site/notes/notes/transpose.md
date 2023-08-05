@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/transpose/","title":"Transpose","noteIcon":"","created":"","updated":""}
 ---
 
+
 **转置**
 
 假设我们有一个矩阵
