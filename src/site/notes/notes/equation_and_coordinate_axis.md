@@ -3,7 +3,7 @@
 ---
 
 
-我们从方程出发，知道了行列式这么一个家伙，下面再来看看方程是什么，方程中的**等号**是问题的核心
+方程中的**等号**是问题的核心，**方程（英文：equation）是表示两个数学式（如两个数、函数、量、运算）之间相等关系的一种等式，而函数的定义是在非空数集之间的映射称为函数，要注意区分**
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/手绘一维坐标轴.2fvv0l7brt7o.webp" width="590"></div>
 
