@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/barycentric-coordinates/","title":"Barycentric coordinates","noteIcon":"","created":"","updated":""}
 ---
 
+
 **重心坐标**
 
 **插值Interpolation**
