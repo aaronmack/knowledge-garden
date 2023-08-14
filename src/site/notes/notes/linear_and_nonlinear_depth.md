@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/linear-and-nonlinear-depth/","title":"Linear and nonlinear depth","noteIcon":"","created":"","updated":""}
 ---
 
+
 **深度**
 
 **线性深度**
