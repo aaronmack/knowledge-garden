@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/orthographic-transformation/","title":"Orthographic transformation","noteIcon":"","created":"","updated":""}
 ---
 
+
 **正交变换Orthographic Transformation**
 
 什么是正交变换？[图片](https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/orthographic.24gyysktzse8.webp) 正交变换也是一个投影过程，这里则不像透视变换中那样是一个椎体了，而是一个方体，所以在正交变换中，近大远小这种情况则不存在，相反，你会看到所有的物体无论远近，在投影平面上都是有相仿的大小
