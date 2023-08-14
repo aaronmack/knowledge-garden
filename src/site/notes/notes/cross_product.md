@@ -39,7 +39,7 @@ $$\mathbf{a}=(a_1,a_2,a_3),\mathbf{b}=(b_1,b_2,b_3)$$
 
 $$\mathbf{a}\times \mathbf{b}=\ <a_2b_3-a_3b_2,\ \ a_3b_1-a_1b_3,\ \ a_1b_2-a_2b_1>$$
 
-也可以写成**伪行列式**的形式
+也可以写成**伪行列式**的形式[[notes/equation_and_determinant\|notes/equation_and_determinant]]
 
 $$a\times b = \left ( \begin{matrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3 \end{matrix} \right ) = \mathbf{i}(a_2b_3-a_3b_2) + \mathbf{j}(a_3b_1-a_1b_3) + \mathbf{k}(a_1b_2-a_2b_1)$$
 
@@ -79,7 +79,7 @@ $$\mathbf{a}\mathbf{H} = \left ( \begin{matrix} 0&\color{red}{-a_3}&\color{blue}
 $$\mathbf{a}\times \mathbf{b} = \mathbf{A}*\mathbf{b} = \left ( \begin{matrix} 0&-a_3&a_2 \\ a_3&0&-a_1 \\ -a_2&a_1&0 \end{matrix} \right )\left ( \begin{matrix} b_1 \\ b_2 \\ b_3 \end{matrix} \right )$$
 
 **Part4**
-根据内积和外积的定义
+根据内积和外积的定义 [[notes/dot_product\|notes/dot_product]]
 
 $$(\mathbf{a}\times \mathbf{b})\cdot \mathbf{a} =<a_2b_3-a_3b_2,\ \ a_3b_1-a_1b_3,\ \ a_1b_2-a_2b_1> \cdot \mathbf{a} \\ =\ a_1(a_2b_3-a_3b_2) + a_2(a_3b_1-a_1b_3) + a_3(a_1b_2-a_2b_1) \\ $$ 
 
