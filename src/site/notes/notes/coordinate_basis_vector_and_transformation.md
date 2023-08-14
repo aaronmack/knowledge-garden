@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/coordinate-basis-vector-and-transformation/","title":"Coordinate basis vector and transformation","noteIcon":"","created":"","updated":""}
 ---
 
+
 **坐标基矢**
 
 坐标基矢是我们人为定义的事物；一维情形下就是数轴上$0$到$1$之间那个距离，记为
