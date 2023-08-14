@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/dual-vector/","title":"Dual vector","noteIcon":"","created":"","updated":""}
 ---
 
+
 给定一个**矢量**,如果存在这样一个**映射**,它把给定的矢量映射为一个实数,就说这个映射是**对偶矢量**。例如一个$n$维行向量
 
 $$(a_1,a_2\cdots a_n)$$
