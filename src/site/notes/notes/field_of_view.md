@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/field-of-view/","title":"Field of view","noteIcon":"","created":"","updated":""}
 ---
 
+
 **FOV (Field-Of-View) and aspect ratio**
 
 **原理**
