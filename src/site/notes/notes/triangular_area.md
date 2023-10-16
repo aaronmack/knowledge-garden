@@ -5,7 +5,7 @@
 
 三角形面积计算
 
-![image](https://cdn.staticaly.com/gh/aaronmack/image-hosting@master/e/image.4l1flcfl04y0.webp)
+![image](https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.4l1flcfl04y0.webp)
 
 $$
 A=\frac{bh}{2}
