@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/notes/linear-transforms-and-translation/","title":"Linear transforms and translation","noteIcon":"","created":"","updated":""}
 ---
 
+
 **线性变换Linear Transforms**
 
 **缩放Scale**
