@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/troubleshooting/","title":"Troubleshooting and FAQ","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/troubleshooting/","title":"Troubleshooting and FAQ","noteIcon":""}
 ---
 
 
