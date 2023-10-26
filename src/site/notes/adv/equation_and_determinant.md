@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/equation-and-determinant/","title":"Equation and determinant","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/equation-and-determinant/","title":"Equation and determinant","noteIcon":""}
 ---
 
 
