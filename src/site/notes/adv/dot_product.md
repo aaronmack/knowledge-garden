@@ -28,7 +28,7 @@ $${\displaystyle {\vec {a}}\cdot {\vec {b}}=|{\vec {a}}|\,|{\vec {b}}|\cos \thet
 **推导**
 
 两个定义之间是等价的并可以互相推出
-根据[[adv/cosine_law\|notes/cosine_law]]余弦定理则我们有
+根据[[adv/cosine_law\|cosine_law]]余弦定理则我们有
 
 $$|| a-b ||^2 = ||a||^2+||b||^2-2||a|| \quad ||b||cos\alpha$$
 
