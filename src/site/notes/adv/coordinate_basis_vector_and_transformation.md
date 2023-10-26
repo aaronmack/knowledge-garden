@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/coordinate-basis-vector-and-transformation/","title":"Coordinate basis vector and transformation","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/coordinate-basis-vector-and-transformation/","title":"Coordinate basis vector and transformation","noteIcon":""}
 ---
 
 
