@@ -11,3 +11,7 @@ Favor
 > [!INFO] INFO 
 >
 > [[notes/picture\|notes/picture]]
+
+[[notes/about_me\|About Me]]
+
+Want to say
