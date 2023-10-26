@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/field-of-view/","title":"Field of view","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/field-of-view/","title":"Field of view","noteIcon":""}
 ---
 
 
