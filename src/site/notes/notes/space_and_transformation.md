@@ -22,7 +22,7 @@
 
 正交变换[[notes/orthographic_transformation\|notes/orthographic_transformation]]是将一个方体内我们所可以看到的事物，最终投射到一"面"上
 
-视口变换[[notes/viewport_transformation\|notes/viewport_transformation]]
+视口变换[[notes/viewport_transformation\|Viewport transformation]]
 
 **NDC Space** 
 
