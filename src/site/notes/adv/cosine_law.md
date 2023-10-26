@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-permalink":"category/basis/","permalink":"/category/basis/","title":"Cosine law","tags":["basis"],"noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/cosine-law/","title":"Cosine law","tags":["basis"],"noteIcon":"","created":"","updated":""}
 ---
 
 
