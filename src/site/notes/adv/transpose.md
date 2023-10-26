@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/transpose/","title":"Transpose","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/transpose/","title":"Transpose","noteIcon":""}
 ---
 
 
