@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/polygon-triangulation/","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/polygon-triangulation/","noteIcon":""}
 ---
 
 
