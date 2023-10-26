@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-permalink":"/notes/about/me","permalink":"/notes/about/me/","pinned":true,"dgHomeLink":true,"dgShowFileTree":true,"noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"dg-permalink":"/aboutme/","permalink":"/aboutme/","title":"About Me","noteIcon":"","created":"","updated":""}
 ---
 
 原来你就是阿龙，让我找到你了。
