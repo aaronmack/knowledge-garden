@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/cross-product/","title":"Cross product","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/cross-product/","title":"Cross product","noteIcon":""}
 ---
 
 
