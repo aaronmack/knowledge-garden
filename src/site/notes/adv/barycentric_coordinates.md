@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/barycentric-coordinates/","title":"Barycentric coordinates","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/barycentric-coordinates/","title":"Barycentric coordinates","noteIcon":""}
 ---
 
 
