@@ -10,8 +10,8 @@ Favor
 
 > [!INFO] INFO 
 >
-> [[notes/picture\|notes/picture]]
+> [[adv/picture\|picture]]
 
-[[notes/about_me\|About Me]]
+[[adv/about_me\|About Me]]
 
 Want to say
