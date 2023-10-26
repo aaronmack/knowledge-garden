@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/dot-product/","title":"Dot product","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/dot-product/","title":"Dot product","noteIcon":""}
 ---
 
 
