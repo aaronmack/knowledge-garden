@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/homogenous-coordinates/","title":"Homogenous coordinates","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/homogenous-coordinates/","title":"Homogenous coordinates","noteIcon":""}
 ---
 
 
