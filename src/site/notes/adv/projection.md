@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/projection/","title":"Projection","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/projection/","title":"Projection","noteIcon":""}
 ---
 
 
