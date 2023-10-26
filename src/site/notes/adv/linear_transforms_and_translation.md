@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/linear-transforms-and-translation/","title":"Linear transforms and translation","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/linear-transforms-and-translation/","title":"Linear transforms and translation","noteIcon":""}
 ---
 
 
