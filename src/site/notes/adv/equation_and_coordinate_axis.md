@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/equation-and-coordinate-axis/","title":"Equation and coordinate axis","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/equation-and-coordinate-axis/","title":"Equation and coordinate axis","noteIcon":""}
 ---
 
 
