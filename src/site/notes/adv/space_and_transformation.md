@@ -18,9 +18,9 @@
 
 (https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/graphics/Perspective-and-Orthographic-Frustum.424xa80owoe.webp)
 
-透视变换[[adv/perspective_transformation\|notes/perspective_transformation]]是将一个锥内我们所可以看到的事物，最终投射到一"点"处
+透视变换[[adv/perspective_transformation\|perspective_transformation]]是将一个锥内我们所可以看到的事物，最终投射到一"点"处
 
-正交变换[[adv/orthographic_transformation\|notes/orthographic_transformation]]是将一个方体内我们所可以看到的事物，最终投射到一"面"上
+正交变换[[adv/orthographic_transformation\|orthographic_transformation]]是将一个方体内我们所可以看到的事物，最终投射到一"面"上
 
 视口变换[[adv/viewport_transformation\|Viewport transformation]]
 
