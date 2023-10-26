@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/index/","title":"Knowledge","tags":["gardenEntry"],"noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/index/","title":"Knowledge","tags":["gardenEntry"],"noteIcon":""}
 ---
 
 
