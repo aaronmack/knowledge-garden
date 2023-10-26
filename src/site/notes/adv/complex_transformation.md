@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/complex-transformation/","title":"Complex transformation","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/complex-transformation/","title":"Complex transformation","noteIcon":""}
 ---
 
 
