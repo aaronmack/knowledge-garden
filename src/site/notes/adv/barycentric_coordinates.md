@@ -41,7 +41,7 @@ $P$点分别与三角形的三个顶点相连，我们可以得到三个小三�
 
 <div align=center><img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/mathematics/重心坐标计算示例.2fikhcexbois.webp" width="390"></div>
 
-首先是三角形上的法线计算，使用[[adv/cross_product\|notes/cross_product]]叉乘
+首先是三角形上的法线计算，使用[[adv/cross_product\|cross_product]]叉乘
 
 $$\mathbf{n}=(b-a)\times (c-a)$$
 
