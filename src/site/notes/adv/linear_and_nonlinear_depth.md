@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/linear-and-nonlinear-depth/","title":"Linear and nonlinear depth","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/linear-and-nonlinear-depth/","title":"Linear and nonlinear depth","noteIcon":""}
 ---
 
 
