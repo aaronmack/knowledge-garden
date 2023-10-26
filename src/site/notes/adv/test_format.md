@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/test-format/","title":"Test format","tags":["basis"],"noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/test-format/","title":"Test format","tags":["basis"],"noteIcon":""}
 ---
 
 
