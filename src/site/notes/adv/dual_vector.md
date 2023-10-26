@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/dual-vector/","title":"Dual vector","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/dual-vector/","title":"Dual vector","noteIcon":""}
 ---
 
 
