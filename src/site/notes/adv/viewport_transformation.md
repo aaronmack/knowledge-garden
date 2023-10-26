@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/viewport-transformation/","title":"Viewport transformation","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/viewport-transformation/","title":"Viewport transformation","noteIcon":""}
 ---
 
 
