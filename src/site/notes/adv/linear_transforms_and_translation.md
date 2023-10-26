@@ -71,12 +71,12 @@ $$a'=a+1;\ b'=b+1,\ c'=c+1$$
 $$\left ( \begin{matrix} x'\\ y' \end{matrix} \right ) = \left ( \begin{matrix} a&b\\ c&d \end{matrix} \right ) \left ( \begin{matrix} x\\ y \end{matrix} \right ) + \left ( \begin{matrix} t_x\\ t_y \end{matrix} \right )$$
 可这样表示后面会多出
 $$\left ( \begin{matrix} t_x\\ t_y \end{matrix} \right )$$
-使得偏偏平移变换与其它的变换**不同**，那有没有其它的方法呢？答案是: [[adv/homogenous_coordinates\|notes/homogenous_coordinates]] 齐次坐标
+使得偏偏平移变换与其它的变换**不同**，那有没有其它的方法呢？答案是: [[adv/homogenous_coordinates\|homogenous_coordinates]] 齐次坐标
 
 
 **变换复合**
 
-[[adv/complex_transformation\|notes/complex_transformation]]变换复合，很容易就理解
+[[adv/complex_transformation\|complex_transformation]]变换复合，很容易就理解
 
 $$
 \mathbf{T} \quad
