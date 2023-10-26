@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/orthographic-transformation/","title":"Orthographic transformation","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/orthographic-transformation/","title":"Orthographic transformation","noteIcon":""}
 ---
 
 
