@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/perspective-transformation/","title":"Perspective transformation","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/perspective-transformation/","title":"Perspective transformation","noteIcon":""}
 ---
 
 
