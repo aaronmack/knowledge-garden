@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/showcase/","title":"Showcase","noteIcon":"","created":"","updated":""}
+{"dg-publish":true,"permalink":"/adv/showcase/","title":"Showcase","noteIcon":""}
 ---
 
 
