@@ -10,6 +10,7 @@
 发现一个非常方便的Windows激活工具，但可能需要科学上网才行~
 
 [https://github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.6.4.0
 
 **2. Windows优化**
 
@@ -24,6 +25,8 @@
 [https://github.com/ionuttbara/windows-defender-remover](https://github.com/ionuttbara/windows-defender-remover)
 
 [https://github.com/swagkarna/Defeat-Defender-V1.2.0](https://github.com/swagkarna/Defeat-Defender-V1.2.0)
+
+
 
 **4. 磁盘映射**
 
