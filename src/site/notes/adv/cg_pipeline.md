@@ -140,7 +140,7 @@ db.grantRolesToUser('aaron', ['readWriteAnyDatabase']);
 
 虽然Pype中也有Project Manage，但是我们可以扩展使用Cgwire去进行项目的管理与创建。
 
-执行 `docker run -d -p 25061:80 --name cgwire cgwire/cgwire:0.17.37` 去开启cgwire服务，这里设置的是为防止污染80端口而改为25061端口，版本为截至现在最新的0.17.37，这里可以改为latest选择最新版本
+执行 `docker run -d -p 25061:80 --name cgwire-run cgwire/cgwire:0.17.37` 去开启cgwire服务，这里设置的是为防止污染80端口而改为25061端口，版本为截至现在最新的0.17.37，这里可以改为latest选择最新版本
 
 成功后在浏览器打开localhost:25061，初次登录用户名与密码是
 
@@ -152,6 +152,8 @@ db.grantRolesToUser('aaron', ['readWriteAnyDatabase']);
 进去之后就可以创建用户，创建部门，资产类型等等，这里我创建了一个名为Discover的项目。
 
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.5q4k52oe0q80.webp" alt="image" />
+
+
 # OpenPype
 
 
@@ -177,12 +179,67 @@ db.grantRolesToUser('aaron', ['readWriteAnyDatabase']);
 
 ```
 # 创建一个管理员账号
-db.createUser( { user: "aaron", pwd: "secretpassword", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } )
+db.createUser( { user: "aaron", pwd: "<password>", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } )
 
-# 创建一个普通账号
-db.grantRolesToUser( "ll", [{role:"read", db:"openpype"}, {role:"readWrite", db:"avalon"}] )
+# 给账号设置权限 (openpype只读，这是一些系统设置，avalon需要可读可写)
+db.grantRolesToUser( "aaron", [{role:"read", db:"openpype"}, {role:"readWrite", db:"avalon"}] )
 ```
+
+然后就可以在![image](https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.1pej7ki22chs.png)中选择 Admin -> Studio Settings -> Module (Kistu) 中填入你的cgwire的地址与端口，例如我填写的是`http://localhost:25061` 然后点击保存设置
+
+此时再去执行 (一个是Module用于同步Kitsu的项目数据，一个是启动OpenPype) 
+
+> 我这里是Windows系统下
+
+```bash
+@echo off
+
+set "KITSU_LOGIN=lilong999000@gmail.com"
+set "KITSU_PWD=<password>"
+set OPENPYPE_MONGO=mongodb://aaron:<password>@localhost:27018
+C:\data\exec\openpype\build\openpype_console.exe module kitsu sync-service
+
+pause
+```
+
+```bash
+@echo off
+
+set OPENPYPE_MONGO=mongodb://aaron:<password>@localhost:27018
+C:\data\exec\openpype\build\openpype_console.exe
+
+pause
+```
+
+
+有了这些全部的设置，就可以尽情去捣鼓了~
 
 ## 从仓库下载
 
-e.g. OpenPype · GitHub https://github.com/ynput/OpenPype/releases/tag/3.17.3
+e.g. OpenPype · GitHub https://github.com/ynput/OpenPype/releases/tag/3.17.3 下载下来的版本运行与从源码构建的版本是一致的。
+
+
+# 其它
+
+## Cgwire的导出与导入
+
+如果需要迁移整个cgwire，因为是在docker中创建的容器，所以可以将整个容器import和export
+
+> [!WARNING] 这样运行docker命令后，默认数据是存储到docker的volume中，我们可以导出当前的docker的数据到本地，再导入，这样volume就被取消了，虽然不知这样是否安全
+
+当在第一次创建cgwire后，可以立马执行
+`docker export cgwire-run > cgwire-run-export.tar` 
+再执行
+`docker import cgwire-run-export.tar cgwire-run`，
+
+这个时候再去导出和导入这个容器数据就也在其中了
+`docker export cgwire-run > cgwire-run-export.tar`
+再执行
+`docker import cgwire-run-export.tar cgwire-run`
+
+最后执行
+`docker run --user=root --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin --env=DEBIAN_FRONTEND=noninteractive --env=PG_VERSION=12 --env=DB_USERNAME=root --env=DB_HOST=  --workdir=/opt/zou -p 25061:80 --restart=no --runtime=runc -d --name cgwire-run cgwire-run /opt/zou/start_zou.sh`
+
+> 查看command的命令`docker ps -a --no-trunc`,上面的启动命令就是用这个命令查询出来的command，以及其它的包括环境变量的配置是在docker里copy docker run
+
+* 但这样不好的是，丢失了元数据以及image的数据
