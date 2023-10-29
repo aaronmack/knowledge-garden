@@ -212,6 +212,9 @@ pause
 ```
 
 
+DCC 的配置 在 Admin -> Studio Settings -> Applications中，可以选择启用哪些DCC，也可以在这里面配置环境变量等等![image](https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.39v4jdcijps0.webp) 例如这里是我配置的关于Houdini的一个，配置了RenderMan渲染插件~ 如果Pype没有列出你的DCC版本也可以在下方的Key和Label中自己去配置一个~
+
+
 有了这些全部的设置，就可以尽情去捣鼓了~
 
 ## 从仓库下载
