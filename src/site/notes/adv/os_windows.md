@@ -41,3 +41,11 @@ https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.6.4.0
 **CrystalDiskMark** 磁盘读写速度测试~
 
 **CrystalDiskInfo** 查看磁盘健康情况~
+
+
+**6. Windows下的sudo与服务管理**
+
+今天在测试alist的windows本地部署时，发现了nssm这个工具（在alist的官方文档中提到的[Manual installation | AList Docs](https://alist.nn.ci/guide/install/manual.html#get-alist)），我使用的是scoop去管理win上面的程序安装和卸载
+
+scoop install nssm
+scoop install sudo
