@@ -1,11 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/adv/game-engine-shader/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/game-engine-shader/","title":"基本概念","noteIcon":""}
 ---
 
 
 # 基本概念
 
-1. Properties中定义的属性，需要在下方SubShader中写出对应的名称。e.g. 
+1. Properties中定义的属性，需要在下方SubShader中写出对应的名称。e.g.
 
 ```c
 Properties
@@ -32,12 +32,13 @@ fixed4 _Color;
 
 3. 内置函数的使用
 
-* `tex2D`
-* `UnpackNormal`
-* `saturate`
-* `...`
+- `tex2D`
+- `UnpackNormal`
+- `saturate`
+- `…`
 
 4. 透明物体Shader的设置
+
 ```
 Tags { 
 	"RenderType" = "Transparent" 
@@ -55,14 +56,14 @@ Tags {
 
 内置变量
 
-* `_Time`
-* `...`
+- `_Time`
+- `…`
 
 输入结构
 
-* `worldNormal`
-* `viewDir`
-* `...`
+- `worldNormal`
+- `viewDir`
+- `…`
 
 6. Surface Shader 示例
 
@@ -70,13 +71,13 @@ Tags {
 
 7. 一些内置的调用函数与变量
 
-* `_LightColor0 will be the primary directional light color`
-* `#pragma surface surf Toon - LightingToon`
-* `#pragma surface surf SimpleLambert - LightingSimpleLambert`
-* `#pragma surface surf Phong - LightingPhong`
-* `#pragma surface surf CustomBlinnPhong - LightingCustomBlinnPhong`
-* `#pragma surface surf Anisotropic - LightingAnisotropic`
-* `...`
+- `_LightColor0 will be the primary directional light color`
+- `#pragma surface surf Toon - LightingToon`
+- `#pragma surface surf SimpleLambert - LightingSimpleLambert`
+- `#pragma surface surf Phong - LightingPhong`
+- `#pragma surface surf CustomBlinnPhong - LightingCustomBlinnPhong`
+- `#pragma surface surf Anisotropic - LightingAnisotropic`
+- `…`
 
 https://docs.unity3d.com/Manual/SL-SurfaceShaderLighting.html
 
@@ -168,7 +169,6 @@ void surf (Input IN, inout SurfaceOutput o)
 
 [Implementing a Phong Shader in Unity - Jan's Place](https://janhalozan.com/2017/08/12/phong-shader/)
 
-
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.2pj57hmwnrg0.webp" alt="image" />
 
 首先，我们知道投影的计算，但是我们不知$cos(\theta)$,但通过点乘我们可以替换掉得到下方的投影计算。
@@ -180,7 +180,6 @@ void surf (Input IN, inout SurfaceOutput o)
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.1slfvpca6k68.webp" alt="image" />
 
 [3d - How to prove r = n \* 2(l·n) - l in specular reflection? - Mathematics Stack Exchange](https://math.stackexchange.com/questions/4335380/how-to-prove-r-n-2l-n-l-in-specular-reflection)
-
 
 > 在LearnOpenGL中，也是一样的，https://learnopengl.com/Lighting/Basic-Lighting，是调用的reflect函数计算的反射方向
 
@@ -272,3 +271,65 @@ void surf(Input IN, inout SurfaceAnisoOutput o){
 其中最主要的效果来自sin那里，用sin()修改这个值，我们就可以得到一个更暗的中间高光和一个基于halfVector的环形效果。
 
 [Shader Programming, Volume 8. Anisotropic Specular Lighting | by Sebastian Monroy | Medium](https://medium.com/@smokelore/shader-programming-volume-8-cfc8c2fe3659)
+
+## Wave (Vertices Animation)
+
+```c
+void vert(inout appdata_full v, out Input o){
+    UNITY_INITIALIZE_OUTPUT(Input, o);
+    float time =_Time * _Speed;
+    float waveValueA = sin(time + v.vertex.x * _Frequency) * _Amplitude;
+    v.vertex.xyz = float3(v.vertex.x, v.vertex.y + waveValueA, v.vertex.z);  
+    v.normal = normalize(float3(v.normal.x + waveValueA, v.normal.y, v.normal.z));
+    o.vertColor.rgb = float3(waveValueA, waveValueA, waveValueA);
+}
+
+void surf (Input IN, inout SurfaceOutput o)
+{
+    half4 c = tex2D(_MainTex, IN.uv_MainTex);
+    float3 tintColor = lerp(_ColorA, _ColorB, IN.vertColor).rgb;
+    o.Albedo = c.rgb * (tintColor *_tintAmount);
+    o.Alpha = c.a;
+}
+```
+
+sin(pos.x)得到一个振幅波，加到vertex.y的上面。
+
+## Snow
+
+```c
+fixed4 _Color;
+void vert(inout appdata_full v)
+{
+    // Wrong?
+    // float4 sn = mul(UNITY_MATRIX_IT_MV, _SnowDirection);
+    float4 sn = _SnowDirection;
+    if (dot(v.normal, sn.xyz) >= _Snow)
+        v.vertex.xyz += (sn.xyz + v.normal) * _SnowDepth * _Snow;
+}
+
+void surf (Input IN, inout SurfaceOutputStandard o)
+{
+    half4 c = tex2D(_MainTex, IN.uv_MainTex);
+    o.Normal = UnpackNormal(tex2D(_Bump, IN.uv_Bump));
+
+    if (dot(WorldNormalVector(IN, o.Normal), _SnowDirection.xyz) >= _Snow)
+        o.Albedo = _SnowColor.rgb;
+    else
+        o.Albedo = c.rgb * _MainColor;
+    o.Alpha = 1;
+}
+```
+
+通过snowDir与Normal方向点乘与snow的阈值控制哪些区域产生雪，以及在vertex中朝着法线+snowDir的方向偏移顶点位置，来实现一个非常简单的雪的效果。
+
+
+## Parallax
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.27jn8epa5um8.webp" alt="image" />
+
+Parallax(视差)是移动当前视角，画面中的效果还是一直朝向摄像机不产生变化，这个效果可以使用AmplifyShaderEditor中的Parallax Node或者把Screen Position作为UV去采样Texture，两者方法都可以使用。
+热扭曲：屏幕空间位置 + 采样纹理（使用Panner节点(随时间流动的UV值)）
+边缘光：Fresnel效果 + 纹理扰动
+
+https://www.bilibili.com/video/BV1YL4y1b7bB/?vd_source=ce02e1fd8ede3b92cc4f879b568541e2
