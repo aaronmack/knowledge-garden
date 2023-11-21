@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/game-engine-shader/","title":"基本概念","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/game-engine-shader/","noteIcon":""}
 ---
 
 
