@@ -10,7 +10,6 @@
 
 [[adv/picture\|Picture]] （我的愿景）
 
-[[want_to_say\|Want to say]] （想说的）
 # Entrance 2
 
 ### 2023-10-29 - Openpype OpenSource Pipeline
@@ -23,9 +22,9 @@
 
 ### 2023-08-31 - assimp Update Triangulate Process
 
-[Update Triangulate Process by aaronmack · Pull Request #5205 · assimp/assimp · GitHub](https://github.com/assimp/assimp/pull/5205)
+[Update Triangulate Process by aaronmack · Pull Request 5205 · assimp/assimp · GitHub](https://github.com/assimp/assimp/pull/5205)
 
-<img src="https://user-images.githubusercontent.com/43235864/260683473-4c7ab736-be18-4fcb-8348-32278baeb2bc.png" alt="image" width="600" height="600" />
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.3fe0ua575qa0.png" alt="image" width="600" height="600" />
 
 第一个往开源仓库贡献的PR，是在为自己写的一个小玩意中的多边形模型
 三角化时，参考了assimp，发现了有额外一种情况并没有考虑到。遂补足了这个情况。
@@ -37,6 +36,14 @@
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.4xajvc8o9940.png" alt="image" width="600" height="600" />
 
 在W3C上入门学习了HTML/CSS/JS这些网页端基本的知识。
+
+### 2022-03-20 - Course Basics Computer Graphics
+
+[【图形】 阿龙教你学图形-第一部分\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1NR4y1c78Z/)
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.5h5w59in5uk0.webp" alt="image" 
+width="600" height="600" />
+自己录制的第一套公开的课程，是一个入门级的小课程，里面讲了一些非常基础的关于渲染的知识。
 
 ### 2021-12-29 - Figma Design
 
