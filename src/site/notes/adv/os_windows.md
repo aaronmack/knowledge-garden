@@ -49,3 +49,7 @@ https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.6.4.0
 
 scoop install nssm
 scoop install sudo
+
+**7. Windows 空间清理**
+
+[GitHub - SFYYH/cPanClear: C盘清理教程](https://github.com/SFYYH/cPanClear) 这个仓库中的README介绍了如何清理Windows的C盘去释放空间，这里面提到了Dism++这个软件，用它可以清理到一些更深层次的不需要的文件。
