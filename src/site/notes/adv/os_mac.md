@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/os-mac/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/os-mac/","title":"OS - Mac","noteIcon":""}
 ---
 
 
