@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/b-spline/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/b-spline/","title":"B Spline","noteIcon":""}
 ---
 
 # Graphics-B Spline
