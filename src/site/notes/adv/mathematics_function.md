@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/mathematics-function/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/mathematics-function/","title":"Mathematics Function","noteIcon":""}
 ---
 
 
