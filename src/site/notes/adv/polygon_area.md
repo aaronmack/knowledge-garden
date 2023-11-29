@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/polygon-area/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/polygon-area/","title":"Polygon Area","noteIcon":""}
 ---
 
 
