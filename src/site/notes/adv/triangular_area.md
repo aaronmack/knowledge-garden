@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/triangular-area/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/triangular-area/","title":"Triangular area","noteIcon":""}
 ---
 
 
