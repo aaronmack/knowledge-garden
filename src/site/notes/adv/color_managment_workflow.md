@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/color-managment-workflow/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/color-managment-workflow/","title":"Color Managment Workflow","noteIcon":""}
 ---
 
 
