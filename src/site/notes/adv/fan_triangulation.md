@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/fan-triangulation/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/fan-triangulation/","title":"Fan Triangulation","noteIcon":""}
 ---
 
 
