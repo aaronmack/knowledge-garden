@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/cg-pipeline/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/cg-pipeline/","title":"CG Pipeline","noteIcon":""}
 ---
 
 
