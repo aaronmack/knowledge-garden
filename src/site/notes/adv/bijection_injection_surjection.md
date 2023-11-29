@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/bijection-injection-surjection/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/bijection-injection-surjection/","title":"Bijection Injection Surjection","noteIcon":""}
 ---
 
 
