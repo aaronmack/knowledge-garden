@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/os-wsl/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/os-wsl/","title":"OS - WSL","noteIcon":""}
 ---
 
 
