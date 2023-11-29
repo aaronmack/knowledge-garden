@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/game-engine-shader/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/game-engine-shader/","title":"Game Engine Shader","noteIcon":""}
 ---
 
 
