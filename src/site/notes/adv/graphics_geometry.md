@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/graphics-geometry/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/graphics-geometry/","title":"Graphics Geometry","noteIcon":""}
 ---
 
 
