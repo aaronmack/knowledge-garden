@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/computational-geometry/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/computational-geometry/","title":"Computational Geometry","noteIcon":""}
 ---
 
 
