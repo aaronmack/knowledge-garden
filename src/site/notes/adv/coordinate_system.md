@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/coordinate-system/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/coordinate-system/","title":"Coordinate System","noteIcon":""}
 ---
 
 
