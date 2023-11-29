@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/two-ears-theorem/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/two-ears-theorem/","title":"Two ears theorem","noteIcon":""}
 ---
 
 
