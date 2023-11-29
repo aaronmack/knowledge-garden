@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/bezier-curve/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/bezier-curve/","title":"Bezier Curve","noteIcon":""}
 ---
 
 # Graphics-Bezier Curve
