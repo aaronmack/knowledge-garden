@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/mathematics-geometry/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/mathematics-geometry/","title":"Mathematics Geometry","noteIcon":""}
 ---
 
 
