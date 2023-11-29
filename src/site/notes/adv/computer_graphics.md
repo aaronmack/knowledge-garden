@@ -1,4 +1,4 @@
 ---
-{"dg-publish":true,"permalink":"/adv/computer-graphics/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/computer-graphics/","title":"Computer Graphics","noteIcon":""}
 ---
 
