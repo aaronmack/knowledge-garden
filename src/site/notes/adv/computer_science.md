@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/computer-science/","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/computer-science/","title":"Computer Science","noteIcon":""}
 ---
 
 
