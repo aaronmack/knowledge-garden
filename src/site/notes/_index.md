@@ -10,6 +10,8 @@
 
 [[adv/picture\|Picture]] （我的愿景）
 
+[[finder \|Finder]] （书签）
+
 # Entrance 2
 
 ### 2023-10-29 - Openpype OpenSource Pipeline
