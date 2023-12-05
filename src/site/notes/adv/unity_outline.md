@@ -17,10 +17,11 @@
 > Dynamic Bone
 > HAIRWORKS
 
+> [usd-unity-sdk](https://github.com/Unity-Technologies/usd-unity-sdk)
+> [glTFast](https://github.com/atteneder/glTFast)
 
 > 高清渲染管线 HDRP - Volumetric Cloud
-> Houdini Engine
-> Quixel Bridge
+> Houdini引擎 Houdini Engine
 
 > 地形工具 Gaia
 > 地形工具 Terrain Composer 2
@@ -30,7 +31,8 @@ InputSystem
 
 3. Assets
 
-PolyHaven
+> PolyHaven
+> Quixel Bridge
 
 ## Consider
 
@@ -76,12 +78,17 @@ https://github.com/ThusSpokeNomad/GameNetworkingResources
 [GitHub - gonglei007/GameDevMind: 最全面的游戏开发技术图谱。帮助游戏开发者们在已知问题上节省时间，省出更多的精力投入到更有创造性的工作中去。](https://github.com/gonglei007/GameDevMind)
 [GitHub - Syomus/ProceduralToolkit: Procedural generation library for Unity](https://github.com/Syomus/ProceduralToolkit)
 
+特效工具集 [GitHub - Unity-Technologies/VFXToolbox: Additional tools for Visual Effect Artists](https://github.com/Unity-Technologies/VFXToolbox)
 ### Toon Shader
 
 https://github.com/Delt06/urp-toon-shader
 https://github.com/Delt06/toon-rp
 https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample
 https://github.com/JasonMa0012/JTRP
+
+## Resource
+
+[Free VFX image sequences and flipbooks | Unity Blog](https://blog.unity.com/engine-platform/free-vfx-image-sequences-flipbooks)
 
 ## Learning Paths
 
