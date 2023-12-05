@@ -10,7 +10,7 @@
 
 [[adv/picture\|Picture]] （我的愿景）
 
-[[finder \|Finder]] （书签）
+[[adv/finder\|Finder]] （书签）
 
 # Entrance 2
 
