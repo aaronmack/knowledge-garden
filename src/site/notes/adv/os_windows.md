@@ -26,6 +26,8 @@ https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.6.4.0
 
 [https://github.com/swagkarna/Defeat-Defender-V1.2.0](https://github.com/swagkarna/Defeat-Defender-V1.2.0)
 
+https://github.com/qtkite/defender-control
+
 > [!WARNING] 在移除时一定要选择Safe的选项，这样可以Rollback。
 ## Windows 磁盘映射
 
@@ -49,9 +51,38 @@ https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.6.4.0
 scoop install nssm
 scoop install sudo
 
+还有一个gsudo，不知这两个有何区别。
+
+## Windows下的工具
+
+开发人员的瑞士军刀 [GitHub - veler/DevToys: A Swiss Army knife for developers.](https://github.com/veler/DevToys)
+
+scoop install devtoys-np
+
+## Windows 美化Shell
+
+oh-my-posh是适用于任何外壳的提示主题引擎。
+
+1.安装clink 使用 `scoop install clink` 执行`clink autorun install`,这样默认启动cmd就是clink的界面了。
+
+2.执行clink info, 找到scripts目录，进入目录后新建一个`oh-my-posh.lua`文件,内容如下
+
+```lua
+load(io.popen('oh-my-posh init cmd'):read("*a"))()
+```
+3.administrator打开cmd，执行`oh-my-posh font install`下载字体,需要开启代理。
+
+4.安装方式 `scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json`
+
 ## Windows 空间清理
 
 [GitHub - SFYYH/cPanClear: C盘清理教程](https://github.com/SFYYH/cPanClear) 这个仓库中的README介绍了如何清理Windows的C盘去释放空间，这里面提到了Dism++这个软件，用它可以清理到一些更深层次的不需要的文件。
+
+## Windows 关闭更新
+
+[GitHub - WereDev/Wu10Man: Enable/Disable Windows 10 Automatic Updates](https://github.com/WereDev/Wu10Man)
+
+这个项目的作者已经不维护了。┭┮﹏┭┮
 
 ## Visual Studio Extension - Viasfora
 
@@ -76,3 +107,15 @@ Listary - [Listary – File Search & App Launcher](https://www.listary.com/)
 ## Windows下的代理
 
 Proxifier - https://www.proxifier.com/download/
+
+## Windows 鼠标键盘共享
+
+1.可以以某台电脑为Server，其它电脑为Client，一套鼠标键盘控制多台电脑 barrier - [GitHub - debauchee/barrier: Open-source KVM software](https://github.com/debauchee/barrier)测试之后发现鼠标对不准，会在另外一边屏幕消失。Github上的也有提Issue。
+
+2.Mouse without Borders
+ 下载网址  https://www.microsoft.com/en-us/download/details.aspx?id=35460 
+ 参考视频：[同时操控 2 台电脑，只需一个鼠标和键盘！完全免费，由微软官方提供 | 零度解说 - YouTube](https://www.youtube.com/watch?v=bcsZzhdrccs)
+
+## Windows 开机启动
+
+只需要把快捷方式放到 `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` 这个目录下，即可。
