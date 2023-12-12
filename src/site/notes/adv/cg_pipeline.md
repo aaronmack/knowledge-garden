@@ -119,7 +119,7 @@ use admin
 # 创建用户 (测试的时候发现Pype并没有自己的用户管理，是通过数据库用户来进行权限管理的，真的牛)
 db.createUser( { user: "aaron", pwd: "secretpassword", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } ) 
 
-db.createUser( { user: "Mohan", pwd: "password", roles:[{ role: "read" , db:"openpype"}, role: "readWrite" , db:"avalon"} }] } ) 
+db.createUser( { user: "Mohan", pwd: "password", roles:[{role: "read" , db:"openpype"}, {role: "readWrite" , db:"avalon"}] } ) 
 
 db.grantRolesToUser( "ll", [{role:"read", db:"openpype"}, {role:"readWrite", db:"avalon"}] ) 
 
@@ -133,6 +133,10 @@ db.system.users.find()
 db.grantRolesToUser('aaron', ['readWriteAnyDatabase']);
 
 ```
+
+# 其它
+
+或者不要像上面那样，那么麻烦，如果你有一台vps主机，可以参考如果安装mongodb在那台vps上。可以见[[adv/os_linux\|OS Linux]]中如果安装Mongodb。
 
 # Cgwire
 
