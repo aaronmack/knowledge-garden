@@ -98,3 +98,8 @@
 
 > [NixOS](https://github.com/ryan4yin/nixos-and-flakes-book)
 > 声明式系统，任意回滚，感觉很不错。
+
+
+> [Transformer - YouTube](https://www.youtube.com/watch?v=ugWDIIOHtPA&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4&index=61)
+> 在看Transformer视频时，下面这张图中，机器两次都学习到了`it`所指示的含义。
+> <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702299321458.webp" alt="1702299321458" width=500/>
