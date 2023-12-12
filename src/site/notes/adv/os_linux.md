@@ -337,3 +337,55 @@ FLUSH PRIVILEGES;
 -- Create database
 CREATE DATABASE testdb;
 ```
+
+# Ubuntu22-04 安装Mongodb
+
+[How to Install MongoDB on Ubuntu 22.04 | Cherry Servers](https://www.cherryservers.com/blog/install-mongodb-ubuntu-22-04)
+
+```bash
+# 安装安装过程中所需的先决条件包。
+sudo apt install software-properties-common gnupg apt-transport-https ca-certificates -y
+
+# 要安装最新的 MongoDB 软件包，需要将 MongoDB 软件包仓库添加到 Ubuntu 的源代码列表文件中。在此之前，你需要使用 wget 命令在系统中导入 MongoDB 的公钥
+curl -fsSL https://pgp.mongodb.com/server-7.0.asc |  sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
+
+# 在 /etc/apt/sources.list.d 目录中添加 MongoDB 7.0 APT 代码库
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+# 检查它 cat /etc/apt/sources.list.d/mongodb-org-7.0.list
+sudo apt update	
+
+# 安装Mongodb
+sudo apt install mongodb-org -y
+
+# 启用MongoDB在启动时启动
+mongod --version
+sudo systemctl status mongod
+sudo systemctl start mongod
+sudo systemctl enable mongod
+
+# 检查端口是否监听
+sudo ss -pnltu | grep 27017
+
+# 创建账号
+mongosh
+show dbs
+use admin
+---
+db.createUser(
+  {
+    user: "root",
+    pwd: passwordPrompt(),
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+ }
+)
+---
+exit
+
+# 配置外部访问
+
+sudo nano /etc/mongod.conf
+改变 `bindIp: 127.0.0.1` 为 `bindIp: 127.0.0.1, mongo-server-ip`
+更正：修改为 `0.0.0.0`
+sudo systemctl restart mongod
+```
