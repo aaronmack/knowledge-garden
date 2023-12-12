@@ -14,6 +14,14 @@
 
 # Entrance 2
 
+### 2023-12-10 - Discover (E1)
+
+[Site Unreachable](https://github.com/semi-desert/Ye)
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702139850359.webp" alt="1702139850359" width=600/>
+
+写的一个渲染小工具，带有python绑定，简单的point-vertex-edge-primitive表示，简单的节点系统，支持光栅和光追。暂时还没有公开~
+
 ### 2023-10-29 - Openpype OpenSource Pipeline
 
 [[adv/cg_pipeline\|OpenPype Pipeline]]
