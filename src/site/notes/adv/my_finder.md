@@ -47,6 +47,12 @@
 
 # 工具
 
+## 流程
+
+> 影视动画游戏
+
+1. Royal Render 渲染管理工具
+
 ## 建站
 
 1. 非常容易上手的一个建站工具。丰富的插件与主题。[GitHub - halo-dev/halo: 强大易用的开源建站工具。](https://github.com/halo-dev/halo)
@@ -97,6 +103,8 @@
     <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.1hkxcvf69tmo.webp" alt="image" width=500/>
 24. 下一代ls命令 - https://github.com/lsd-rs/lsd, 也是可以通过`scoop install lsd`，就可以在Windows下用`lsd -alh`查看文件了。
 25. 文本编辑器，类似于Vim，[GitHub - helix-editor/helix: A post-modern modal text editor.](https://github.com/helix-editor/helix)
+26. cpix2tex - LaTeX OCR 识别图片的Latex数学公式，需要搭配一个截图工具，截图后复制到memory中，安装`pip install "pix2tex[gui]"` 最好是有个虚拟环境 [GitHub - lukas-blecher/LaTeX-OCR: pix2tex: Using a ViT to convert images of equations into LaTeX code.](https://github.com/lukas-blecher/LaTeX-OCR)
+    <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702310448042.webp" alt="1702310448042" width=500/>
 
 
 ## AI相关
