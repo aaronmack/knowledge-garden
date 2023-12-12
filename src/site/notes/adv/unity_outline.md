@@ -2,16 +2,16 @@
 {"dg-publish":true,"permalink":"/adv/unity-outline/","title":"Unity Outline","noteIcon":""}
 ---
 
-## Preparation
+## 艺术准备
 
-是否满足Unity-humanoid的要求
-动画的BlendShape满足ARKit命名规范
+1. 绑定是否满足Unity-Humanoid-Avatar (是 Unity 识别特定动画模型是否为人形布局的方法，以及该模型的腿部、手臂、头部和身体的对应部分。) 的要求
+2. 动画的BlendShape满足ARKit命名规范
 
-1. Maya
+* Maya
 
 > ADV
 
-2. Unity
+* Unity
 
 > Magic Cloth
 > Dynamic Bone
@@ -29,10 +29,29 @@
 Cinemachine
 InputSystem
 
-3. Assets
+* Assets
 
 > PolyHaven
 > Quixel Bridge
+> AMD GPUOpen MaterialX Library
+
+## Sentis
+
+[About Sentis Beta - AI Beta / Sentis - Unity Discussions](https://discussions.unity.com/t/about-sentis-beta/260899/1)
+
+**可以做什么**
+
+1.超分辨率：放大低分辨率图像、模型、纹理等。 
+2.风格转换：将场景的外观或图像效果转换为新的风格 
+3.NPC：自动生成人物对话 
+4.语音识别（NLP）：解释实时语音 
+5.人体/物体检测使用摄像头检测物体
+6.深度估计使用摄像头检测深度 
+7.图像、视频和 3D 模型分类：检测屏幕上的物体 
+8.手写分类：检测手写字母、符号或数字 
+9.生成无限独特的游戏场景 
+10.模拟: 用神经网络逼近复杂函数，驱动游戏逻辑 
+
 
 ## Consider
 
@@ -69,16 +88,6 @@ https://github.com/michidk/Unity-Script-Collection
 https://github.com/XINCGer/Unity3DTraining
 https://github.com/ThusSpokeNomad/GameNetworkingResources
 
-### Tools 
-
-[GitHub - Unity-Technologies/ml-agents: The Unity Machine Learning Agents Toolkit (ML-Agents) is an open-source project that enables games and simulations to serve as environments for training intelligent agents using deep reinforcement learning and imitation learning.](https://github.com/Unity-Technologies/ml-agents)
-
-[GitHub - Unity-Technologies/usd-unity-sdk: Integration of Pixar's Universal Scene Description into Unity](https://github.com/Unity-Technologies/usd-unity-sdk)
-
-[GitHub - gonglei007/GameDevMind: 最全面的游戏开发技术图谱。帮助游戏开发者们在已知问题上节省时间，省出更多的精力投入到更有创造性的工作中去。](https://github.com/gonglei007/GameDevMind)
-[GitHub - Syomus/ProceduralToolkit: Procedural generation library for Unity](https://github.com/Syomus/ProceduralToolkit)
-
-特效工具集 [GitHub - Unity-Technologies/VFXToolbox: Additional tools for Visual Effect Artists](https://github.com/Unity-Technologies/VFXToolbox)
 ### Toon Shader
 
 https://github.com/Delt06/urp-toon-shader
