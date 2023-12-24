@@ -188,3 +188,7 @@ git: `C:\Users\<username>\.gitconfig`
 [https]	
 	proxy = http://127.0.0.1:10809
 ```
+
+# Windows CMD 中文显示
+
+在CMD的顶部空白处右键，打开属性，选择字体，在字体选项栏中，将默认字体(我这里是`Consoles`)改为`KaiTi`，就可以显示中文了。
