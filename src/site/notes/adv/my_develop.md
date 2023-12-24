@@ -4,7 +4,8 @@
 
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.1fo75js2vjj4.webp" alt="image" width=600/>
 
-# Openpype
+# CG
+## Openpype
 
 [GitHub - ynput/OpenPype: Main OpenPype repository and AYON openpype addon codebase](https://github.com/ynput/OpenPype)
 
@@ -17,7 +18,7 @@ $Env:https_proxy = "http://localhost:10809"
 .\tools\build.ps1
 ```
 
-# ArmorPaint
+## ArmorPaint
 
 [GitHub - armory3d/armortools: 3D Content Creation Tools](https://github.com/armory3d/armortools)
 
@@ -34,7 +35,7 @@ cd c:/src/armortools/armorpaint
 # Copy build\x64\Release\ArmorPaint.exe to build\krom to run ArmorPaint.exe directly
 ```
 
-# OpenUSD
+## OpenUSD
 
 **构建**
 
@@ -65,30 +66,7 @@ python .\build_scripts\build_usd.py --materialx --draco --alembic --hdf5 --openi
 usdGenSchema [schemaPath] [codeGenPath]
 ```
 
-
-# Stable-diffusion
-
-**ui**
-
-```bash
-# python version 3.10.11
-git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
-
-.\webui-user.bat
-```
-
-# Ye
-
-## ub
-
-python开发环境
-
-```bash
-python310 -m virtualenv C:\src\Ye\src\ub\venv
-# pip install dependenties with requirements.txt
-```
-
-# Blender
+## Blender
 
 [Blender Developer Wiki](https://wiki.blender.org/wiki/Main_Page)
 
@@ -99,7 +77,7 @@ make update
 make full nobuild
 ```
 
-# QuiltiX
+## QuiltiX
 
 [GitHub - PrismPipeline/QuiltiX: QuiltiX is a graphical node editor to edit, and author MaterialX based materials of 3D assets](https://github.com/PrismPipeline/QuiltiX)
 
@@ -114,7 +92,7 @@ pip install git+https://github.com/PrismPipeline/OpenUSD_build.git@23.11-win-mtl
 python -m QuiltiX
 ```
 
-# gatling
+## gatling
 
 
 [GitHub - pablode/gatling: Hydra-enabled GPU path tracer that supports MaterialX and MDL](https://github.com/pablode/gatling)
@@ -124,9 +102,131 @@ cmake -B build -Wno-dev -DUSD_ROOT=%E_USD_LOCATION% -DMDL_ROOT=%E_MDLSDK_DIR% -D
 cmake --build build --config Release --target INSTALL -- /M:8
 ```
 
-# pyside-setup
+# AI
 
-# vcpkg
+## SD-WebUI-EasyPhoto
+
+[GitHub - aigc-apps/sd-webui-EasyPhoto: 📷 EasyPhoto | Your Smart AI Photo Generator.](https://github.com/aigc-apps/sd-webui-EasyPhoto)
+
+输入了一些右下方的图片训练出Lora后，就可以扩散风格到人物肖像上。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702548443361.webp" alt="1702548443361" width=700/>
+
+## ComfyUI
+
+[GitHub - comfyanonymous/ComfyUI: The most powerful and modular stable diffusion GUI with a graph/nodes interface.](https://github.com/comfyanonymous/ComfyUI)
+
+SD的图形用户界面，具有节点图。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702519000724.webp" alt="1702519000724" width=500/>
+
+## Stable-diffusion-Webui
+
+[GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+
+```bash
+# python version 3.10.11
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+
+.\webui-user.bat
+```
+
+**config**
+
+webui-user.bat
+
+```bash
+set COMMANDLINE_ARGS=--ckpt-dir <path> --lora-dir <path>
+```
+
+
+## Krita-ai-diffusion
+
+[GitHub - Acly/krita-ai-diffusion: Streamlined interface for generating images with AI in Krita. Inpaint and outpaint with optional text prompt, no tweaking required.](https://github.com/Acly/krita-ai-diffusion)
+
+在 Krita 中使用AI生成图像的一个插件。
+
+## MiniGPT-4
+
+[GitHub - Vision-CAIR/MiniGPT-4: Open-sourced codes for MiniGPT-4 and MiniGPT-v2 (https://minigpt-4.github.io, https://minigpt-v2.github.io/)](https://github.com/Vision-CAIR/MiniGPT-)
+
+1.我使用的Vicuna-7B，`low_resource=False`, 最少GPU显存 16GB。如果是`True`，我这里使用了10GB。
+2.安装CUDA Toolkit 12/11。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702518989918.webp" alt="1702518989918" width=650/>
+
+**Windows的支持**
+
+[Windows not supported · Issue #28 · Vision-CAIR/MiniGPT-4 · GitHub](https://github.com/Vision-CAIR/MiniGPT-4/issues/28)
+
+```bash
+# 也许可以不用conda，使用virtualenv
+git clone https://github.com/Vision-CAIR/MiniGPT-4.git
+cd MiniGPT-4
+##conda env create -f environment.yml
+##conda activate minigptv
+
+# 卸载不支持GPU版本的包
+pip uninstall bitsandbytes
+pip uninstall torch
+# 重新安装torch与bitsandbytes
+##这个不更新啦，使用下面那个
+##pip install git+https://github.com/Keith-Hon/bitsandbytes-windows.git
+pip install scipy
+pip install bitsandbytes==0.41.2 --index-url=https://jllllll.github.io/bitsandbytes-windows-webui
+
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+---
+
+python demo_v2.py --cfg-path eval_configs/minigptv2_eval.yaml  --gpu-id 0
+```
+
+
+## FastChat
+
+[GitHub - lm-sys/FastChat: An open platform for training, serving, and evaluating large language models. Release repo for Vicuna and Chatbot Arena.](https://github.com/lm-sys/FastChat)
+GPU16GB显存，加载了vicuna-7b和vicuna-13b。
+
+```bash
+git clone https://github.com/lm-sys/FastChat.git
+cd FastChat
+# use venv
+pip3 install --upgrade pip  # enable PEP 660 support
+pip3 install -e ".[model_worker,webui]"
+
+---
+
+# cli
+python -m fastchat.serve.cli --model-path lmsys/vicuna-7b-v1.5-16k --load-8bit --cpu-offloading
+
+# gradio
+python -m fastchat.serve.controller
+python -m fastchat.serve.model_worker --model-path lmsys/vicuna-7b-v1.5-16K --load-8bit --cpu-offloading
+python -m fastchat.serve.gradio_web_server
+```
+
+
+
+# Ye
+
+## ub
+
+python开发环境
+
+```bash
+python310 -m virtualenv C:\src\Ye\src\ub\venv
+# pip install dependenties with requirements.txt
+```
+
+
+# Dev
+
+## (Tools)
+
+### pyside-setup
+
+### vcpkg
 
 ```bash
 # download & install
@@ -137,16 +237,30 @@ git clone https://github.com/microsoft/vcpkg
 ...
 ```
 
-# (Python)
+## (Python)
 
-## pyenv 
+### conda 
+
+```bash
+# Shell Register
+conda init cmd.exe
+# Shell Unregister
+conda init cmd.exe --reverse
+
+# Update
+conda update -n base -c defaults conda
+## Or minimize update use
+conda install conda=23.11.0
+```
+
+### pyenv 
 
 > [!ERROR] Till the 2023-12-08，Using scoop install pyenv causing error `core` compoment install error.  So we use this command `Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"` from [Installing and setting up Python - Everything I Know](https://jonathansoma.com/everything/setup/install-python/#__tabbed_3_2)
 
 在这之后，需要执行 pyenv update 去更新仓库。
 
 > [!WARNING] Building Ye and blender warning. say python not found.
-## pipx
+### pipx
 
 [GitHub - pypa/pipx: Install and Run Python Applications in Isolated Environments](https://github.com/pypa/pipx)
 
@@ -161,7 +275,7 @@ pipx install pycowsay
 
 ```
 
-## poetry
+### poetry
 
 [GitHub - python-poetry/poetry: Python packaging and dependency management made easy](https://github.com/python-poetry/poetry)
 
@@ -172,7 +286,7 @@ python -m pipx install poetry
 python -m pipx upgrade poetry
 ```
 
-# (Version Control)
+## (Version Control)
 
 1. git
 2. SnowFS
@@ -206,68 +320,230 @@ svn revert --recursive .
 
 > [!ERROR] 2.SVN图标在Winodws11下不显示。原因是SVN的图标在注册表中靠后了。（Windows按照空格来排），(Explorer空白处右键 ) -> TortoiseSVN -> Settings -> Icon Overlays -> Overlay Handles -> Start registry Editor进行编辑，增加多几个空格使其排名靠前。
 
-# (Database Connection)
+## (Database Connection)
 
 Mongosh - https://www.mongodb.com/try/download/compass
 Mysqlsh - https://dev.mysql.com/downloads/shell/
 
+## (Cloud Services)
+
+**我们缺少的不是工具，而是真正产生价值的点子。**
+
+Vercel
+Cloudflare
+fly.io
+
 # (AI)
 
-**有哪些概念**
+### 概念
 
 * pytorch: [Start Locally | PyTorch](https://pytorch.org/get-started/locally/)
 * tensorflow: [GitHub - tensorflow/tensorflow: An Open Source Machine Learning Framework for Everyone](https://github.com/tensorflow/tensorflow)
 * ONNX：Open Neural Network Exchange（开放式神经网络交换）[ONNX | Home](https://onnx.ai/)
-* One-hot: `[0,1,0,0,...]`
-* Embedding
-	* Word2vec
+* OpenVINO - 从框架中优化深度学习模型。
 
-**有哪些结构**
-
-* Gradient descent 梯度下降
-	* derivate - 求导，learning rate
-	* sgd，Adam
+* Gradient descent 梯度下降 - （鞍点，局部最优）
+	* derivate - 求导，learning rate 学习速率
+	* sgd 随机梯度下降，Momentum动量，Adam (替代随机梯度下降算法)
 	* partial derivate 偏微分
 	* gradient 梯度 - 所有的偏微分的向量 e.g. $\nabla f=\left({\frac{\partial f}{\partial x_{1}}};{\frac{\partial f}{\partial x_{2}}};\cdot\cdot;{\frac{\partial f}{\partial x_{n}}}\right)$
-* Linear Regression 线性回归 $wx+b$
-* Logistic Regression 逻辑回归 - 线性回归的基础上加了一个激活函数（压缩函数）
-* Classification 分类问题
+	* Convex function 凸函数 - 全局最优解
+	* 梯度离散/爆炸 - 误差积累导致，前层得不到更新
+* Backpropagation 反向传播
+* Activation Functions 激活函数 - 阈值响应机制
+	* Sigmoid - $f(x)=\sigma(x)={\frac{1}{1+e^{-x}}}$
+	* Tanh - $2 sigmoid (2x)-1$
+	* Rectified Linear Unit  (ReLU) - $f(x)={\left\{\begin{array}{l l}{0}&{{\mathrm{for~}}x<0}\\ {x}&{{\mathrm{for~}}x\geq0}\end{array}\right.}$
+	* Leaky ReLU
+	* SELU - 两个函数的合并
+	* Softmax - [Logits Scores -> Softmax -> Probabilities], 概率和为1
+	* Softplus - ReLU函数的平滑版本
+* Typical Loss
+	* Mean Squared Error (MSE) 均方误差
+	* Cross Entropy Loss 交叉熵
+	* Hinge Loss
+* Himmelblau Function函数 - 数学家构造的特殊函数，用来测试深度学习算法是否能够收敛到局部最小值。
+* Chain rule链式法则 - <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702375241410.webp" alt="1702375241410" width=300/> 求解过程是 ${\frac{\partial E}{\partial w_{j k}^{1}}}={\frac{\partial E}{\partial{\sigma_{k}^{1}}}}{\frac{\partial{\sigma_{k}^{1}}}{\partial{w_{j k}^{1}}}}={\frac{\partial E}{\partial{\sigma_{k}^{2}}}}{\frac{\partial{\sigma_{k}^{2}}}{\partial{\sigma_{k}^{1}}}}{\frac{\partial{\sigma_{k}^{1}}}{\partial{w_{j k}^{1}}}}$
+* Dropout regularization - 为了防止过拟合。Dropout的思想是对于网络的每一层，随机的丢弃一些单元。
+* PCA - 主元分析，用于提取数据的主要特征分量。主要用于数据降维。例如两维数据房价与面积，房价与面积的正相关性很大，其中一维的数据是冗余的。
+* Sequence 序列
+	* Word Embedding
+	* Word2vec
+	* GloVe
+	* One-hot: `[0,1,0,0,…]` - 稀疏，高维
+* AutoEncoders - <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702399346359.webp" alt="1702399346359" width=300/> 中间是Neck，可以升/降维。
+	* Denoising AutoEncoders 去噪自编码器
+	* Dropout AutoEncoders
+	* Adversarial AutoEncoders  对抗自编码器
+	* Variational AutoEncoder (VAE) 变分自编码器
+* Gradient Clipping - 用于缓解梯度爆炸。
+* Zeno/One/Few-Shot Learning 零/一/少样本学习。例如，当我们只有一张狮子的照片时，一次样本学习可以帮助我们将新的狮子图像正确分类。
+* **RLHF**（Reinforcement Learning from Human Feedback，人类反馈强化学习）。是GPT-4/ChatGPT与GPT-3.5的主要区别。
+* Anomaly Detection 异常侦测
+* LoRA，英文全称Low-Rank Adaptation of Large Language Models，直译为大语言模型的低阶适应，这是微软的研究人员为了解决大语言模型微调而开发的一项技术。
+* PGNet是一种新颖的框架，用于通过点收集操作实时阅读文本。 基于多任务学习的单步文本检测识别器。
 
-* RNN  - (Hard to parallel)
-	- LSTM - (Long Short-Term Memory) 长短时记忆
-* CNN  - Using CNN to replace RNN (CNN Can parallel)
+---
+* AGI（通用人工智能）1.人工智慧是我们的目标。2.人类的能力是本能与学习。
+	* Machine Learning - 1.是达成目标的手段。2.就是让机器找到一个函式（找到函式三步骤- a.设定范围(订出候选函式集合-Model)，b.设定标准(评量函式好坏-Loss)，c.达成目标(找出最好的函式-最佳化Optimization)）。
+		* Deep Learning 深度学习 1.是机器学习的其中一种方法
+* Supervised Learning
+	* Linear Regression 线性回归 $wx+b$
+	* Logistic Regression 逻辑回归 - 线性回归的基础上加了一个激活函数（压缩函数）
+	* Classification 分类问题
+	* Semi-supervised Learning - 半监督学习。
+* Unsupervised Learning
+* Reinforcement Learning - 增强学习。游戏例如Dota，与环境交互反馈。
+* Representation Learning - 表征学习。
+* Structured (Generative) Learning - 结构(生成式)学习。
+* Meta Learning - 元学习，也叫做学会学习，learn to learn。人类学习新东西时会用到之前学的东西，比如你会玩LOL，那么对玩王者荣耀会很快。目前的深度学习遇到的问题是在遇到新的问题，即使比较类似的情况下，也要重新学习，这一差异就是MetaLearning的动机。
+* Transfer Learning 迁移学习 一种神经网络学习到了识别Cat这种物体，再使用这部分知识或者部分知识去识别X-Ray扫描。（Pre Training 预训练, Fine Turning 微调）
+* Multitask Learning - 神经网络同时执行多项任务，每个任务都会影响其他任务
+
+---
+
+* Feedforward neural network (前馈神经网络) 也叫做感知机（Perceptron） - 二分类线性模型
+* SVM (Support vector machine) 支持向量网络 - <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702374445464.webp" alt="1702374445464" width=150/>
+
+* 卷积神经网络：局部感知 - $y(t)=x(t)*h(t)=\int_{-\infty}^{\infty}x(\tau)h(t-\tau)d\tau$
+	* Weight sharing 权值共享 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702379993258.webp" alt="1702379993258" width=260/>
+	* 池化 - Max pooling, Avg polling
+		* Downsample, Upsample, Subsampling
+
+* RNN 循环神经网络  - (Hard to parallel) 语境信息上下文，引入memory的机制， <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.67dklaknt5c0.webp" alt="image" width=300/>, 问题是很容易造成梯度离散或梯度爆炸。
+	- LSTM - (Long Short-Term Memory) 长短时记忆 - 解决了记忆长度的问题。引入"闸门"的机制。<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702394510046.webp" alt="1702394510046" width=300/> 闸门就是Sigmoid函数。输入门，遗忘(记忆)门。
+* CNN 卷积神经网络  - Using CNN to replace RNN (CNN Can parallel)
+* GAN 生成对抗性网络  
+	* Train 训练 $\begin{array}{l l}{{\operatorname*{min}\operatorname*{max}L(D,G)=\mathbb{E}_{x\to p_r(x)}[\log D(x)]+\mathbb{E}_{z\to p_z(z)}[\log(1-D(G(z)))]}} \end{array}$
+	* Generator 生成
+	* Discriminator 鉴别 [一文看懂「生成对抗网络 - GAN」基本原理+10种典型算法+13种应用](https://easyai.tech/ai-definition/gan/)
 * Self-Attention Layer - Transformer
 	- q:query (to match other)
 	- k:key (to be matched)
 	- v:information to be extracted
 	- -
 	- Positional Encoding ($e^i$)
-* Multi-head Self-Attention
-	- Norm (Layer Norm, Batch Norm)
-* Transformer
-
-<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702297659308.webp" alt="1702297659308" width=500/>
-这是一个seq2seq的model，左半部是Encoder，右半部是Decoder。
-* Universal Transformer - (横轴Positions使用Transformer，纵轴Depth使用RNN)
+* Multi-head Self-Attention (MHSA)
+	- Norm (Layer Norm, Batch Norm, Instance Norm, Group Norm)
+* **Transformer** <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702297659308.webp" alt="1702297659308" width= 260/> 这是一个seq2seq的model，左半部是Encoder，右半部是Decoder。
+	* Universal Transformer - (横轴Positions使用Transformer，纵轴Depth使用RNN)
+	* Vision Transformer - 是Google提出的基于Transformer的图片分类模型。<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702523427973.webp" alt="1702523427973" width=300/>
 * Self-attention GAN - 用于影像处理的Transformer，一个pixel考虑全部pixel信息。
+* 扩散模型
+	* Noising Process <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.xi3onj9rqjk.webp" alt="image" width=200/>
+* 多模态模型架构 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702558622286.webp" alt="1702558622286" width=300/>
+	* 1）**合并注意力架构**（Merge-attention）
+	* 2）**共同注意力架构**（Co-attention）
+	* 3）**交叉注意力架构**（Cross-attention）
+	* 4）**三角Transformer架构**（Tangled-transformer）
+	* 5）**模态间对比学习架构**（Inter-Modality Contrastive Learning）
 
-**有哪些模型**
 
-MiDaS - 通过单张图像计算相对深度。
+### 模型
 
-BERT
-GPT
-ELMO
+* 大型语言模型（LLM）- 文字接龙..
+	* ChatGPT
+	* [nanoGPT](https://github.com/karpathy/nanoGPT) 是一个用于对中等规模的生成式预训练 Transformer（GPT）进行训练和调优的框架。
+	* Llama2
+	* Mistral-7B
+	* Mixtral 8x7B - MoE（Mixture of Experts）
+	* WizardCoder
+	* 羊驼系列
+		* Vicuna -Based On LLaMa-13B
+		* Alpaca -Based On LLaMa-7B
+		* Guanaco - Based On QLoRA quantification
+	* LaMDA (Language Models for Dialog Applications)
 
-Next-ViT - [[2207.05501] Next-ViT: Next Generation Vision Transformer for Efficient Deployment in Realistic Industrial Scenarios](https://arxiv.org/abs/2207.05501)
-OpenVINO - 
+* 多模态模型
+	* GPT 生成式预训练变换模型
+	* Macaw-LLM：具有图像、视频、音频和文本集成的多模态语言建模
+	* CLIP ViT-L (Vision Transformer - Low resolution): Connecting text and images。
+	* Stable Diffusion
+	* SVD (Stable Video Diffusion)
+	* Flamingo
+	* LLaVA
+
+* 扩散模型
+	* 连续型扩散模型
+		* DDPM 去噪扩散概率模型（Denoising Diffusion Probabilistic Models）
+		* DDIM 去燥扩散隐式模型 （Diffusion Denoising Implicit Model）
+		* Improved Diffusion
+		* Classifier Guidance 亦被称为Guided Diffusion
+		* Classifier Free Guidance
+		* DALL-E-2 - AI图形生成器
+		* Google Imagen
+		* LCM (Latent Consistency Model)
+		
+	* 离散型扩散模型
+		* Multinomial Diffusion
+		* D3PM
+		* ImageBART
+
+* 语言表征模型
+	* BERT
+	* GPT
+	* ELMO
+
+* 视觉模型
+	* MiDaS - 通过单张图像计算相对深度。
+	* Next-ViT - [[2207.05501] Next-ViT: Next Generation Vision Transformer for Efficient Deployment in Realistic Industrial Scenarios](https://arxiv.org/abs/2207.05501)
+	* VI-Depth
+
+* 卷积神经网络模型
+	* ResNet (深度残差网络):  短路层(Skip to shortcut)
+	* AlexNet
+	* GoogLeNet - 22 layers
+	* VGGNet-11/16/19 - 更小型的卷积核心。1x1 convolutions.
+	* LeNet - 80年代
+	* UNet - 为生物医学图像分割开发的卷积神经网络。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702522306435.webp" alt="1702522306435" width=400/>
 
 **有哪些数据集**
 
 * MNIST - 手写数字
+* ImageNet
+* CIFAR10/100 - 10类6000张照片。
 
 ## 资料
 
-[Google Research Blog](https://blog.research.google/)
+谷歌研究论坛[Google Research Blog](https://blog.research.google/)
+词嵌入数据可视化[Embedding projector - visualization of high-dimensional data](https://projector.tensorflow.org/)
+LLM可视化 [https://bbycroft.net/llm](https://bbycroft.net/llm)
+
 李宏毅
-吴恩达
+吴恩达 Andrew NG
+
+
+## 应用
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702620460693.webp" alt="1702620460693" width=500/>
+
+* GPT
+	* 文字冒险游戏 (ChatGPT) <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702572278800.webp" alt="1702572278800" width=300/> 
+	* 解决数学问题(FunSearch)
+* Diffusion
+	* 可控的图像生成 (ControlNet) <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702572357330.webp" alt="1702572357330" width=300/>
+	* 图像编辑(概念转换) (DreamBooth) <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702572462628.webp" alt="1702572462628" width=300/>
+	* 图像编辑(文本驱动)
+	* 图像修复/扩展
+	* 图像的风格迁移 (BLIP-Diffusion) <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702572827664.webp" alt="1702572827664" width=300/>
+	* 图像的交互式编辑 (DragGAN,DragDiffusion)
+
+# (Graphics)
+
+**有哪些概念**
+
+* 场
+	* 标量场 - 符号距离场(SDF)， 密度场(Density Field)， 散度场(描述一点是汇聚还是扩散)
+		* 符号距离场 - 梯度即法线，大小即距离
+	* 向量场 - 速度场，涡度场，加速度场
+* 场的操作
+	* 标量场 - 梯度(输出：向量场)，曲率，拉普拉斯（作用，平滑，算子：热扩散）
+	* 向量场 - 散度(输出：标量场)，旋度，归一化
+	* RenormalizeSDF - 包面的几何只有表示内外而没有距离。需要做Eikonal equation(程函方程)得到带有距离的SDF
+* 场，几何，粒子
+	* 场实际上是任意的几何与粒子的中间介质（中间表达）
+* 自由表面 （free surface），包面后的几何
+* Eikonal equation(程函方程) - 程函方程的一般形式为$|\nabla u(x)|=F(x), x∈Ω$，  约束条件：边界$u(x)$为$0$；$F(x)$是位置的函数， $|·|$  是欧几里得范数，$u(x)$是从边界到Ω内部x的所需要的最短时间，F(x)是在x处耗费的时间。
+  <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702320461230.webp" alt="1702320461230" width=400/>
