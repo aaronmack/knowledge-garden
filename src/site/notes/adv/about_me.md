@@ -21,5 +21,3 @@
 <img src="http://xyzzyxwz.top:8080/wp-content/uploads/2023/11/IMG_0200_cleanup.jpg" alt="image" width="300" class="center"/>
 
 **孟龙 - 23年10月**
-
-(你的知识应当是一个图，你的目标应当是一座山)
