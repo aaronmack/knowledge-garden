@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/unity-tools/","title":"Unity Tools","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/unity-tools/","title":"Unity Tools","tags":["unity"],"noteIcon":""}
 ---
 
 ## Houdini Engine
