@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/unreal-outline/","title":"Unreal Outline","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/unreal-outline/","title":"Unreal Outline","tags":["unreal"],"noteIcon":""}
 ---
 
 # 技术
