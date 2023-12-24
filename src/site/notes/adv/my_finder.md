@@ -14,6 +14,8 @@
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.4gy89hr8e520.webp" alt="image" width=500/>
 5. 另一个科技周刊，也是很不错的 [1Link.Fun 科技周刊](https://1link.fun/) 
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.73f6cf89tsg0.webp" alt="image" width=500/>
+6. Python 潮流周刊，包括精品文章、教程、开源项目、工具、视频和热门话题等 - [GitHub - chinesehuazhou/python-weekly: Python 潮流周刊，分享文章、教程、开源项目、软件工具、播客和视频、热门话题等内容](https://github.com/chinesehuazhou/python-weekly)
+7. 独立开发产品变现周刊，每周五发布。[GitHub - ljinkai/weekly: 独立开发产品变现周刊，每周五发布。](https://github.com/ljinkai/weekly)
 
 # 论坛
 
@@ -46,6 +48,10 @@
 
 
 # 工具
+
+## 合作
+
+1.支持多人编辑的白板[GitHub - tldraw/tldraw: a very good whiteboard](https://github.com/tldraw/tldraw)
 
 ## 流程
 
@@ -105,6 +111,7 @@
 25. 文本编辑器，类似于Vim，[GitHub - helix-editor/helix: A post-modern modal text editor.](https://github.com/helix-editor/helix)
 26. cpix2tex - LaTeX OCR 识别图片的Latex数学公式，需要搭配一个截图工具，截图后复制到memory中，安装`pip install "pix2tex[gui]"` 最好是有个虚拟环境 [GitHub - lukas-blecher/LaTeX-OCR: pix2tex: Using a ViT to convert images of equations into LaTeX code.](https://github.com/lukas-blecher/LaTeX-OCR)
     <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702310448042.webp" alt="1702310448042" width=500/>
+27. 调色板软件 [GitHub - eigenmiao/Rickrack: Generate harmonious colors freely.](https://github.com/eigenmiao/Rickrack)
 
 
 ## AI相关
@@ -153,6 +160,7 @@
 4. 一组神经网络和相关算法的简单 PyTorch 实现。都有文档说明。[GitHub - labmlai/annotated\_deep\_learning\_paper\_implementations: 🧑‍🏫 60 Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.68tgnevfww00.webp" alt="image" width=500/>
 5. 神经网络：从零到英雄，系列视频讲座。[GitHub - karpathy/ng-video-lecture](https://github.com/karpathy/ng-video-lecture)
+6. 学习AIGC的Prompt的教程网站，号称永久免费。[👋Welcome | LearnPrompt](https://www.learnprompt.pro/about)
 
 # 冻手
 
@@ -191,3 +199,5 @@
 9. 微软模拟飞行的历史版本 [GitHub - s-macke/FSHistory: Play and Enjoy the History of Microsoft Flight Simulator](https://github.com/s-macke/FSHistory)
    <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.smn0s1537kw.webp" alt="image" width=500/>
    10. 合作博弈论互动指南，以游戏的形式学习博弈论。[GitHub - ncase/trust: An interactive guide to the game theory of cooperation](https://github.com/ncase/trust)
+   11. 一款开源沙盒 MMORPG 游戏。采用 React+Next.js+TypeScript 和 WebAssembly 等技术，构建的大型多人在线角色扮演游戏。玩家可以在游戏里探索世界、建造房子、交易、社交等。 [GitHub - ill-inc/biomes-game: Biomes is an open source sandbox MMORPG built for the web using web technologies such as Next.js, Typescript, React and WebAssembly.](https://github.com/ill-inc/biomes-game)
+   12. Ren'Py视觉小说[The Ren'Py Visual Novel Engine](https://www.renpy.org/) <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702717319162.webp" alt="1702717319162" width=500/>
