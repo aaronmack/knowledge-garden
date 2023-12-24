@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/unity-outline/","title":"Unity Outline","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/unity-outline/","title":"Unity Outline","tags":["unity"],"noteIcon":""}
 ---
 
 ## 艺术准备
@@ -7,60 +7,56 @@
 1. 绑定是否满足Unity-Humanoid-Avatar (是 Unity 识别特定动画模型是否为人形布局的方法，以及该模型的腿部、手臂、头部和身体的对应部分。) 的要求
 2. 动画的BlendShape满足ARKit命名规范
 
-* Maya
+**Maya**
 
 > ADV
 
-* Unity
+**Unity**
+
+Packages
+
+> Subscenes
+> Cinemachine
+> InputSystem
+> HDRP - Volumetric Cloud 高清渲染管线
+> ML-Agents
+
+Store
 
 > Magic Cloth
 > Dynamic Bone
 > HAIRWORKS
+> Gaia 地形工具
+> Terrain Composer 2 地形工具
+> Obi 基于 CPU 的 Unity 实时粒子物理引擎
+> Playmaker 交互式游戏设计
+> Amplify Shader Editor (Pack) 材质编辑器
+> KWS Water System (HDRP) 用于模拟海洋/大海/河流/湖泊/池塘等水面
+> Polygon Pack
+
+OpenSource
 
 > [usd-unity-sdk](https://github.com/Unity-Technologies/usd-unity-sdk)
 > [glTFast](https://github.com/atteneder/glTFast)
-
-> 高清渲染管线 HDRP - Volumetric Cloud
 > Houdini引擎 Houdini Engine
 
-> 地形工具 Gaia
-> 地形工具 Terrain Composer 2
+> Sentis [About Sentis Beta - AI Beta / Sentis - Unity Discussions](https://discussions.unity.com/t/about-sentis-beta/260899/1)
 
-Cinemachine
-InputSystem
-
-* Assets
+**Assets**
 
 > PolyHaven
 > Quixel Bridge
 > AMD GPUOpen MaterialX Library
+> Mixamo
 
-## Sentis
-
-[About Sentis Beta - AI Beta / Sentis - Unity Discussions](https://discussions.unity.com/t/about-sentis-beta/260899/1)
-
-**可以做什么**
-
-1.超分辨率：放大低分辨率图像、模型、纹理等。 
-2.风格转换：将场景的外观或图像效果转换为新的风格 
-3.NPC：自动生成人物对话 
-4.语音识别（NLP）：解释实时语音 
-5.人体/物体检测使用摄像头检测物体
-6.深度估计使用摄像头检测深度 
-7.图像、视频和 3D 模型分类：检测屏幕上的物体 
-8.手写分类：检测手写字母、符号或数字 
-9.生成无限独特的游戏场景 
-10.模拟: 用神经网络逼近复杂函数，驱动游戏逻辑 
-
-
-## Consider
+## 制作考虑
 
 动画融合-Mixamo
 Houdini程序化生成（地形，建筑，场景...）
 动作捕捉，面部捕捉
 
 
-## Repository
+## 开源仓库
 
 ### Effects
 
@@ -78,7 +74,7 @@ Houdini程序化生成（地形，建筑，场景...）
 
 [GitHub - adrian-miasik/unity-shaders: A bunch of shader examples created in Unity (ShaderGraph & Built-in) 🧙✨](https://github.com/adrian-miasik/unity-shaders)
 
-[GitHub - nvjob/nvjob-water-shader-simple-and-fast: #NVJOB Simple Water Shaders. Free Unity Asset.](https://github.com/nvjob/nvjob-water-shader-simple-and-fast)
+[GitHub - nvjob/nvjob-water-shader-simple-and-fast: NVJOB Simple Water Shaders. Free Unity Asset.](https://github.com/nvjob/nvjob-water-shader-simple-and-fast)
 
 ### Collects
 
@@ -95,11 +91,11 @@ https://github.com/Delt06/toon-rp
 https://github.com/ColinLeung-NiloCat/UnityURPToonLitShaderExample
 https://github.com/JasonMa0012/JTRP
 
-## Resource
+## 资源下载
 
 [Free VFX image sequences and flipbooks | Unity Blog](https://blog.unity.com/engine-platform/free-vfx-image-sequences-flipbooks)
 
-## Learning Paths
+## 学习路径
 
 Code Monkey - (Game Script, Multi Player)
 Third Person Game
