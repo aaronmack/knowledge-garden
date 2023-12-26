@@ -33,6 +33,7 @@ Store
 > Amplify Shader Editor (Pack) 材质编辑器
 > KWS Water System (HDRP) 用于模拟海洋/大海/河流/湖泊/池塘等水面
 > Polygon Pack
+> Amplify Impostors 使用billboard技术来表示复杂几何。
 
 OpenSource
 
