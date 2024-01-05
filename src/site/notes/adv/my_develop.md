@@ -102,6 +102,10 @@ cmake -B build -Wno-dev -DUSD_ROOT=%E_USD_LOCATION% -DMDL_ROOT=%E_MDLSDK_DIR% -D
 cmake --build build --config Release --target INSTALL -- /M:8
 ```
 
+## storyboarder
+
+[GitHub - wonderunit/storyboarder: ✏️ Storyboarder makes it easy to visualize a story as fast you can draw stick figures.](https://github.com/wonderunit/storyboarder)
+
 # AI
 
 ## SD-WebUI-EasyPhoto
