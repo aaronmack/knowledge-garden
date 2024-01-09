@@ -319,6 +319,10 @@ insert into table_bak select * from <table_name>;
 alter table table_bak drop id;
 alter table table_bak add id int(11) primary key auto_increment first;
 
+-- Change Password
+ALTER USER 'root'@'%' IDENTIFIED BY '<yourpasswd>'; 
+flush privileges;
+
 -- Query users
 SELECT User, Host, Grant_priv, Super_priv
 FROM mysql.user;
@@ -327,6 +331,8 @@ FROM mysql.user;
 -- Create user with super grant
 CREATE USER 'username'@'%' IDENTIFIED BY 'password';
 GRANT ALL ON *.* TO 'username'@'%' WITH GRANT OPTION;
+#GRANT ALL PRIVILEGES ON *.* TO 'aaron'@'%' WITH GRANT OPTION; 
+FLUSH PRIVILEGES;
 
 
 -- Remove user
@@ -367,7 +373,7 @@ sudo systemctl enable mongod
 # 检查端口是否监听
 sudo ss -pnltu | grep 27017
 
-# 创建账号
+# 创建账号 (这个时候还不需要密码访问)
 mongosh
 show dbs
 use admin
@@ -382,10 +388,34 @@ db.createUser(
 ---
 exit
 
-# 配置外部访问
+# 配置外部访问 （这个时候就需要密码访问了）
 
 sudo nano /etc/mongod.conf
-改变 `bindIp: 127.0.0.1` 为 `bindIp: 127.0.0.1, mongo-server-ip`
-更正：修改为 `0.0.0.0`
+
+Change `bindIp: 127.0.0.1` to `bindIp: 0.0.0.0`
+Change `port: 27017` to `port: 27070`
+Add security:
+    authorization: enabled
+
 sudo systemctl restart mongod
+
+mongosh -u <username> -p <password>
+```
+
+# SSH禁用密码登录
+
+发现Mongodb数据库被勒索了，虽然里面没有特别重要的数据，但那些关于Pipeline配置就都没有了~ 如果这是生产环境，后果不堪设想，要定期备份，加强安全性~
+
+```bash
+nano /etc/ssh/sshd_config
+
+# 将下面这句话移到sshd_config文件的开头（如果不起作用的话）
+PasswordAuthentication no
+
+# 再开启这两句话
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+
+#重启SSH服务
+systemctl restart sshd.service
 ```
