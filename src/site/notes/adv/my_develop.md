@@ -102,10 +102,6 @@ cmake -B build -Wno-dev -DUSD_ROOT=%E_USD_LOCATION% -DMDL_ROOT=%E_MDLSDK_DIR% -D
 cmake --build build --config Release --target INSTALL -- /M:8
 ```
 
-## storyboarder
-
-[GitHub - wonderunit/storyboarder: ✏️ Storyboarder makes it easy to visualize a story as fast you can draw stick figures.](https://github.com/wonderunit/storyboarder)
-
 # AI
 
 ## SD-WebUI-EasyPhoto
@@ -502,6 +498,9 @@ fly.io
 	* UNet - 为生物医学图像分割开发的卷积神经网络。
 
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702522306435.webp" alt="1702522306435" width=400/>
+
+* 其它模型
+	* SMPL - A Skinned Multi Person Linear Model，用于人体动作捕捉。<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1704342182177.webp" alt="1704342182177" width=400/>
 
 **有哪些数据集**
 
