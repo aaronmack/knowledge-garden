@@ -7,7 +7,11 @@
 # CG
 ## Openpype
 
+更详细: [[adv/cg_pipeline\|CG Pipeline]]
+
 [GitHub - ynput/OpenPype: Main OpenPype repository and AYON openpype addon codebase](https://github.com/ynput/OpenPype)
+
+开源Pipeline管理工具。
 
 ```bash
 # python version 3.9.13
@@ -22,6 +26,7 @@ $Env:https_proxy = "http://localhost:10809"
 
 [GitHub - armory3d/armortools: 3D Content Creation Tools](https://github.com/armory3d/armortools)
 
+贴图绘制软件。
 
 ```bash
 # 解压 `..\armorcore\v8\libraries\win32\release\v8_monolithz` using 7-Zip - Extract Here (exceeds 100MB)
@@ -36,6 +41,10 @@ cd c:/src/armortools/armorpaint
 ```
 
 ## OpenUSD
+
+[GitHub - PixarAnimationStudios/OpenUSD: Universal Scene Description](https://github.com/PixarAnimationStudios/OpenUSD)
+
+数据交换格式。
 
 **构建**
 
@@ -70,6 +79,8 @@ usdGenSchema [schemaPath] [codeGenPath]
 
 [Blender Developer Wiki](https://wiki.blender.org/wiki/Main_Page)
 
+开源全功能的DCC软件。
+
 ```bash
 git clone https://projects.blender.org/blender/blender.git
 cd C:\src\blender-git\blender
@@ -77,9 +88,19 @@ make update
 make full nobuild
 ```
 
+### Poly Haven Assets Add-on
+
+[GitHub - Poly-Haven/polyhavenassets: A Blender add-on to integrate our assets natively in the asset browser](https://github.com/Poly-Haven/polyhavenassets)
+
+### VF-BlenderAutosaveRender
+
+https://github.com/jeinselen/VF-BlenderAutosaveRender
+
 ## QuiltiX
 
 [GitHub - PrismPipeline/QuiltiX: QuiltiX is a graphical node editor to edit, and author MaterialX based materials of 3D assets](https://github.com/PrismPipeline/QuiltiX)
+
+基于节点的MaterialX材质编辑。
 
 python version 3.9.13
 
@@ -94,13 +115,68 @@ python -m QuiltiX
 
 ## gatling
 
-
 [GitHub - pablode/gatling: Hydra-enabled GPU path tracer that supports MaterialX and MDL](https://github.com/pablode/gatling)
+
+Hydra光追渲染器。
 
 ```bash
 cmake -B build -Wno-dev -DUSD_ROOT=%E_USD_LOCATION% -DMDL_ROOT=%E_MDLSDK_DIR% -DCMAKE_INSTALL_PREFIX=C:/data/build/gatling -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release --target INSTALL -- /M:8
 ```
+
+## storyboarder
+
+[GitHub - wonderunit/storyboarder: ✏️ Storyboarder makes it easy to visualize a story as fast you can draw stick figures.](https://github.com/wonderunit/storyboarder)
+
+故事版制作。
+
+## xComp
+
+[GitHub - gugenstudio/xComp: best render comparing software in town!](https://github.com/gugenstudio/xComp)
+
+渲染结果比较。
+
+```bash
+cmake -B build -DCMAKE_TOOLCHAIN_FILE="%E_VCPKG_DIR%\scripts\buildsystems\vcpkg.cmake"
+
+cmake --build build --target xcomp --config Release
+
+# Working-dir on 
+#   C:/src/xComp/apps/xcomp/../debug_dir
+# Copy _bin/Release/* to Working-dir
+```
+
+## Allusion
+
+[GitHub - allusion-app/Allusion: A free and open source desktop application for managing your visual library](https://github.com/allusion-app/Allusion)
+
+管理你的图片库。
+
+## Cascade
+
+[GitHub - ttddee/Cascade: Node-based image editor with GPU-acceleration.](https://github.com/ttddee/Cascade)
+
+基于节点的图片编辑。
+
+## GimelStudio
+
+[GitHub - GimelStudio/GimelStudio: Non-destructive, node based 2D image editor with an API for custom nodes](https://github.com/GimelStudio/GimelStudio)
+
+基于节点的图片编辑。
+
+## Krita
+
+[GitHub - KDE/krita: Krita is a free and open source cross-platform application that offers an end-to-end solution for creating digital art files from scratch built on the KDE and Qt frameworks.](https://github.com/KDE/krita)
+
+绘画软件。
+
+## cgru
+
+更详细: [[adv/cg_pipeline\|CG Pipeline]]
+
+[GitHub - CGRU/cgru: CGRU - AFANASY](https://github.com/CGRU/cgru)
+
+CGRU 是计算机图形工具包。其中Afanasy是一个渲染场管理器。 Rules 是一个CG 项目跟踪器。
 
 # AI
 
