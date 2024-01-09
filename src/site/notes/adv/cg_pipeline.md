@@ -2,17 +2,88 @@
 {"dg-publish":true,"permalink":"/adv/cg-pipeline/","title":"CG Pipeline","noteIcon":""}
 ---
 
+# CGRU
 
+官方网站：[CGRU](https://cgru.info/)
+
+## 写到前面
+
+一个渲染农场管理软件，之前最早我捣鼓了Deadline，但是其配置之繁琐，步骤之复杂，着实被震撼到了，当然我觉得，复杂也许意味着强大。直到发现了这个工具，它的配置真的很简单，主流的DCC工具都也支持，是老牌的工具了。它需要一台电脑当server，可以是随便一台电脑。
+
+## 准备一下
+
+当前版本：3.3.1
+
+1. 下载与配置
+
+可以在这个网站下载到[Render Farm Manager, Project Tracker. - Browse Files at SourceForge.net](https://sourceforge.net/projects/cgru/files)最新版本，将它放置到一个目录中，比如我放在`c:\data\exec\cgru\v3.3.1`, 解压到这个里面，然后在这个目录中创建一个`config.json`，这里我填入的内容如下：
+
+```json
+{
+	"cgru_config":
+	{
+		"-company":"Discover",
+		"af_servername":"192.168.31.100",
+		"af_serverport":51000
+	}
+}
+```
+
+因为默认配置文件(`config_default.json`) 中的servername默认是127.0.0.1，我们需要改成服务端电脑的ip地址，这样其它的机器就可以找到啦。这份`config.json`，在其它电脑上也需要用到~ 所以如果改动了，需要同步到其它电脑上。
+
+> [!INFO] cgru并没有区分客户端的安装文件与服务端的安装文件，所以配置好之后，直接将v3.3.1目中压缩一份，复制到其它电脑上就行了。
+
+2. 启动
+
+服务启动
+
+```bash
+set CGRU_LOCATION=C:\data\exec\cgru\v3.3.1
+cd /d %CGRU_LOCATION%
+setup.cmd
+start\AFANASY\_afserver.cmd
+```
+
+* 服务启动后就可以在浏览器中根据配置文件中填写的地址与端口查看各种信息了。
+
+Keeper启动 - 这会启动一个桌面图标，其中一些功能就像是deadline的slaves。可以选择是否让本机执行渲染任务。在其它的电脑就只需要启动这个Keeper就可以啦。
+
+```bash
+set CGRU_LOCATION=C:\data\exec\cgru\v3.3.1
+cd /d %CGRU_LOCATION%
+setup.cmd
+start.cmd
+```
+
+
+3. 选择电脑是否执行渲染任务。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.2bzugvjljim8.webp" alt="image" width=300/>
+
+
+## 提交渲染任务
+
+这里以Blender为例子。
+
+首先给Blender安装插件。插件在cgru的目录plugins中。具体安装就不赘述啦。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.1z3vpdtsuqt.webp" alt="image" width=500/>
+
+在Blender中填好渲染输出的路径后，在Render标签中找到Afanasy子标签，填写你的Job Name后就可以提交了。然后在浏览器中查看当前Job的状态。
+
+## 更多
+
+上面的只是非常非常简单的配置与使用。更深入的使用还是要仔细查看它的文档。在这里 https://cgru.readthedocs.io/en/latest/index.html
 
 # OpenPype
 
-# 题记
+## 写到前面
 
 在捣鼓Pipeline时，从Github上发现了OpenPype这款DCC管道工具和CgWire开源的流程管理软件。
 OpenPype就像是Publisher和Loader，交接棒一样进行流程中数据的管理，并且支持和CgWire的互动，满足一般工作室的需求。
 目前Pype的官方提供了云支持，但代码是开源的你可以自己搭建数据库和Pype。
 
-# 准备
+## 准备工作
 
 > 系统 Windows+Docker
 > Bash 其中在生成CA的部分，是使用的cgywin
@@ -134,32 +205,9 @@ db.grantRolesToUser('aaron', ['readWriteAnyDatabase']);
 
 ```
 
-# 其它
+## 其它
 
 或者不要像上面那样，那么麻烦，如果你有一台vps主机，可以参考如果安装mongodb在那台vps上。可以见[[adv/os_linux\|OS Linux]]中如果安装Mongodb。
-
-# Cgwire
-
-[Installation | Kitsu Documentation](https://kitsu.cg-wire.com/installation/)
-
-虽然Pype中也有Project Manage，但是我们可以扩展使用Cgwire去进行项目的管理与创建。
-
-执行 `docker run -d -p 25061:80 --name cgwire-run cgwire/cgwire:0.17.37` 去开启cgwire服务，这里设置的是为防止污染80端口而改为25061端口，版本为截至现在最新的0.17.37，这里可以改为latest选择最新版本
-
-成功后在浏览器打开localhost:25061，初次登录用户名与密码是
-
-```
-- login: admin@example.com
-- password: mysecretpassword
-```
-
-进去之后就可以创建用户，创建部门，资产类型等等，这里我创建了一个名为Discover的项目。
-
-<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.5q4k52oe0q80.webp" alt="image" />
-
-
-# OpenPype
-
 
 ## 从源码编译
 
@@ -226,9 +274,9 @@ DCC 的配置 在 Admin -> Studio Settings -> Applications中，可以选择启�
 e.g. OpenPype · GitHub https://github.com/ynput/OpenPype/releases/tag/3.17.3 下载下来的版本运行与从源码构建的版本是一致的。
 
 
-# 其它
+## 其它
 
-## Cgwire的导出与导入
+### Cgwire的导出与导入
 
 如果需要迁移整个cgwire，因为是在docker中创建的容器，所以可以将整个容器import和export
 
@@ -250,3 +298,22 @@ e.g. OpenPype · GitHub https://github.com/ynput/OpenPype/releases/tag/3.17.3 �
 > 查看command的命令`docker ps -a --no-trunc`,上面的启动命令就是用这个命令查询出来的command，以及其它的包括环境变量的配置是在docker里copy docker run
 
 * 但这样不好的是，丢失了元数据以及image的数据
+
+# Cgwire
+
+[Installation | Kitsu Documentation](https://kitsu.cg-wire.com/installation/)
+
+虽然Pype中也有Project Manage，但是我们可以扩展使用Cgwire去进行项目的管理与创建。
+
+执行 `docker run -d -p 25061:80 --name cgwire-run cgwire/cgwire:0.17.37` 去开启cgwire服务，这里设置的是为防止污染80端口而改为25061端口，版本为截至现在最新的0.17.37，这里可以改为latest选择最新版本
+
+成功后在浏览器打开localhost:25061，初次登录用户名与密码是
+
+```
+- login: admin@example.com
+- password: mysecretpassword
+```
+
+进去之后就可以创建用户，创建部门，资产类型等等，这里我创建了一个名为Discover的项目。
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.5q4k52oe0q80.webp" alt="image" />
