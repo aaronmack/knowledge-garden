@@ -189,6 +189,18 @@ git: `C:\Users\<username>\.gitconfig`
 	proxy = http://127.0.0.1:10809
 ```
 
+npm:
+
+```bash
+# 设置代理
+npm config set proxy=http://<server>:<port>
+npm config set registry=http://registry.npmjs.org
+npm config set https-proxy http://<server>:<port>
+
+# 移除代理
+npm config delete proxy
+npm config delete https-proxy
+```
 # Windows CMD 中文显示
 
 在CMD的顶部空白处右键，打开属性，选择字体，在字体选项栏中，将默认字体(我这里是`Consoles`)改为`KaiTi`，就可以显示中文了。
