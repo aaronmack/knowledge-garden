@@ -2,6 +2,10 @@
 {"dg-publish":true,"permalink":"/adv/about-me/","title":"About me","noteIcon":""}
 ---
 
+
+
+# 一
+
 原来你就是阿龙，让我找到你了。
 
 咳咳，这我可就有的说了，他很喜欢动画电影，梦想可以制作出来心目中的作品。 在16年的时候，第一次真正接触三维软件后，就完全陷入了当中。后来自学了Houdini特效和编程，从此踏上了征途。 
@@ -21,3 +25,5 @@
 <img src="http://xyzzyxwz.top:8080/wp-content/uploads/2023/11/IMG_0200_cleanup.jpg" alt="image" width="300" class="center"/>
 
 **孟龙 - 23年10月**
+
+
