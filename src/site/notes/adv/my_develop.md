@@ -22,7 +22,9 @@ $Env:https_proxy = "http://localhost:10809"
 .\tools\build.ps1
 ```
 
-## ArmorPaint
+## Armory
+
+### ArmorPaint
 
 [GitHub - armory3d/armortools: 3D Content Creation Tools](https://github.com/armory3d/armortools)
 
@@ -39,6 +41,12 @@ cd c:/src/armortools/armorpaint
 
 # Copy build\x64\Release\ArmorPaint.exe to build\krom to run ArmorPaint.exe directly
 ```
+
+### Armory3D
+
+[GitHub - armory3d/armory: 3D Engine with Blender Integration](https://github.com/armory3d/armory)
+
+一个游戏引擎，可以在 Blender 中构建游戏。
 
 ## OpenUSD
 
@@ -88,14 +96,6 @@ make update
 make full nobuild
 ```
 
-### Poly Haven Assets Add-on
-
-[GitHub - Poly-Haven/polyhavenassets: A Blender add-on to integrate our assets natively in the asset browser](https://github.com/Poly-Haven/polyhavenassets)
-
-### VF-BlenderAutosaveRender
-
-https://github.com/jeinselen/VF-BlenderAutosaveRender
-
 ## QuiltiX
 
 [GitHub - PrismPipeline/QuiltiX: QuiltiX is a graphical node editor to edit, and author MaterialX based materials of 3D assets](https://github.com/PrismPipeline/QuiltiX)
@@ -124,17 +124,9 @@ cmake -B build -Wno-dev -DUSD_ROOT=%E_USD_LOCATION% -DMDL_ROOT=%E_MDLSDK_DIR% -D
 cmake --build build --config Release --target INSTALL -- /M:8
 ```
 
-## storyboarder
-
-[GitHub - wonderunit/storyboarder: ✏️ Storyboarder makes it easy to visualize a story as fast you can draw stick figures.](https://github.com/wonderunit/storyboarder)
-
-故事版制作。
-
 ## xComp
 
 [GitHub - gugenstudio/xComp: best render comparing software in town!](https://github.com/gugenstudio/xComp)
-
-渲染结果比较。
 
 ```bash
 cmake -B build -DCMAKE_TOOLCHAIN_FILE="%E_VCPKG_DIR%\scripts\buildsystems\vcpkg.cmake"
@@ -145,38 +137,6 @@ cmake --build build --target xcomp --config Release
 #   C:/src/xComp/apps/xcomp/../debug_dir
 # Copy _bin/Release/* to Working-dir
 ```
-
-## Allusion
-
-[GitHub - allusion-app/Allusion: A free and open source desktop application for managing your visual library](https://github.com/allusion-app/Allusion)
-
-管理你的图片库。
-
-## Cascade
-
-[GitHub - ttddee/Cascade: Node-based image editor with GPU-acceleration.](https://github.com/ttddee/Cascade)
-
-基于节点的图片编辑。
-
-## GimelStudio
-
-[GitHub - GimelStudio/GimelStudio: Non-destructive, node based 2D image editor with an API for custom nodes](https://github.com/GimelStudio/GimelStudio)
-
-基于节点的图片编辑。
-
-## Krita
-
-[GitHub - KDE/krita: Krita is a free and open source cross-platform application that offers an end-to-end solution for creating digital art files from scratch built on the KDE and Qt frameworks.](https://github.com/KDE/krita)
-
-绘画软件。
-
-## cgru
-
-更详细: [[adv/cg_pipeline\|CG Pipeline]]
-
-[GitHub - CGRU/cgru: CGRU - AFANASY](https://github.com/CGRU/cgru)
-
-CGRU 是计算机图形工具包。其中Afanasy是一个渲染场管理器。 Rules 是一个CG 项目跟踪器。
 
 # AI
 
