@@ -49,6 +49,11 @@
 
 # 工具
 
+## 笔记
+
+1. 做笔记工具 (Obsidian + Obsidian Plugin(Digital Garden)) [[adv/digital_garden\|Digital Garden]]
+2. Notion [[adv/my_notion\|My Notion Share]]
+
 ## 合作
 
 1.支持多人编辑的白板[GitHub - tldraw/tldraw: a very good whiteboard](https://github.com/tldraw/tldraw)
