@@ -10,12 +10,15 @@
 
 [[adv/picture\|Picture]] （我的愿景）
 
-[[adv/my_thinking\|Thinking]]  (我的思考)
-
-[[adv/my_finder\|Finder]] （我的书签）
-
 # Entrance 2
 
+### 2024-01-10 - CGRU Render farm
+
+[[adv/cg_pipeline#CGRU\|CGRU 配置]]
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.67fqkqbzo39c.webp" alt="image" width=600/>
+
+一个开源的渲染农场，配置相当简单。测试提交了Houdini的Arnold渲染任务。也很不错。
 ### 2023-12-17 - Stable Diffusion Krita
 
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.2ofyf0a2p8m0.webp" alt="image" width=600/>
