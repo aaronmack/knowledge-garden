@@ -5,37 +5,65 @@
 
 # Tools
 
+## Pipeline
+
+1. **Openpype** 开源的管道工具。
+2. **cgru** 更详细: [[adv/cg_pipeline\|CG Pipeline]] CGRU 是计算机图形工具包。其中Afanasy是一个渲染场管理器。 Rules 是一个CG 项目跟踪器。
+
+## Matchmove
+
+1. Syntheyes - 平面跟踪(Match move)的一款软件。
 ## Common
 
-1. Openpype 开源的管道工具。
 2. GeoTracker
 3. FaceTracker (KeenTools 系列中的脸部追踪工具)
 4. Tiny Eye (制作眼球的工具，支持Blender的Cycles和Eevee)
 5. Allusion [Allusion](https://github.com/allusion-app/Allusion) 管理你的图片库。
 6. Cascade 基于节点的图片编辑。
 7. GimelStudio 基于节点的图片编辑。
-8. Krita 绘画软件。
-9. cgru 更详细: [[adv/cg_pipeline\|CG Pipeline]] CGRU 是计算机图形工具包。其中Afanasy是一个渲染场管理器。 Rules 是一个CG 项目跟踪器。
+8. **Krita** 绘画软件。
 10. storyboarder 故事版制作软件。
 11. xComp 渲染结果比较工具。 [xComp](https://github.com/gugenstudio/xComp)
 12. Mandelbulber v2 可以生成三维分形的软件。
 13. MeshLib 用于处理和编辑 3D网格的系统。
 14. Wings3D 介绍说是一款对模型进行细分的工具。
 15. QuiltiX 基于节点的MaterialX材质编辑。
+16. Open RV / DJV - 图片序列查看器。
+17. Ink - 写互动叙述故事或者游戏的工具。 [https://github.com/inkle/ink](https://github.com/inkle/ink) 
+18. glslViewer - 命令行中的glsl shader查看器[https://github.com/patriciogonzalezvivo/glslViewer](https://github.com/patriciogonzalezvivo/glslViewer) 
+19. NXT - https://nxt-dev.github.io/ 代码节点分层合成应用程序。
+## Post-compositing video editing
+
+1. **Natron** - nuke软件的平替。用于VFX与MG。[GitHub - NatronGitHub/Natron](https://github.com/NatronGitHub/Natron)
+2. Kdenlive - 开源的视频编辑器。[GitHub - KDE/kdenlive](https://github.com/KDE/kdenlive)
+3. olive - 开源的非线性（节点）视频编辑器。[GitHub - olive-editor](https://github.com/olive-editor/olive)
+4. shotcut - 开源基于Qt的视频编辑器。 https://github.com/mltframework/shotcut
+5. tlRender - 用于视效电影动画的review和playback工具。
+6. xSTUDIO - 用于电影动画的review和playback工具。
+
 
 ## Renderer
 
-1. openmoonray - 梦工厂开源的渲染器。
-2. Guerilla render - 描述中称在灯光与外观开发方面比较出色的一款渲染器。
+1. **openmoonray** - 梦工厂开源的渲染器。
+2. Guerilla render
 3. gatling [gatling](https://github.com/pablode/gatling) - 基于Hydra的光追渲染器。
-4. Cycles - Blender中的基于物理的渲染器。
-5. kajiya - 实时全局光照渲染器。
+4. **Cycles** - Blender中的基于物理的渲染器。
+5. kajiya - 实验性的的实时全局光照渲染器。
+6. **LuxCoreRender** - 用于研究性质的，用于生成摄影级别的图像。(物理光流)
+7. Arnold
+8. Renderman
+9. VRay
+10. Redshift
+11. Mitsuba - 面向研究性质的，正向和反向光传输模拟渲染系统。可微分的渲染器。
+12. Radeon ProRender - AMD开发的物理渲染引擎。
 
 ## Blender
 
-1. Poly Haven Assets Add-on [polyhavenassets](https://github.com/Poly-Haven/polyhavenassets)
+1. **Poly Haven** Assets Add-on [polyhavenassets](https://github.com/Poly-Haven/polyhavenassets)
 2. VF-BlenderAutosaveRender https://github.com/jeinselen/VF-BlenderAutosaveRender
-
+3. **Capsule** - https://github.com/Takanu/Capsule 批量导出Blender中的场景内容。
+4. BlenderGIS - https://github.com/domlysz/BlenderGIS 导入geographic地理数据。
+5. Rigify - CloudRig - 自动绑定的功能集包。 [Blender / CloudRig · GitLab](https://gitlab.com/blender/CloudRig)
 ## awesome 系列
 
 1. [GitHub - cgwire/awesome-cg-vfx-pipeline: List of open-source technologies that help in the process of building a pipeline for CG and VFX productions](https://github.com/cgwire/awesome-cg-vfx-pipeline)
@@ -43,24 +71,50 @@
 
 # CG Assets
 
+## Library
+
 1. https://github.com/knightcrawler25/GLSL-PathTracer assets
 2. https://github.com/LuxCoreRender/LoL LuxCoreRender online asset library
 3. https://luxcorerender.org/example-scenes/ LuxCoreRender Example Scenes
-4. PolyHaven https://polyhaven.com/
+4. **PolyHaven** https://polyhaven.com/
 5. Quixel Bridge https://quixel.com/bridge
 6. AMD GPUOpen MaterialX Library https://matlib.gpuopen.com/main/materials/all
 7. Mixamo https://www.mixamo.com/
-8. Blender Cloud Libraries https://cloud.blender.org/libraries
+9. freepoly.org https://www.freepoly.org/en
+10. free3d https://free3d.com/3d-models/
+11. sketchfab https://sketchfab.com/
+12. 3D Scans https://threedscans.com/ - 3D扫描模型
+13. ambientcg [ambientCG - CC0 Textures, HDRIs and Models](https://ambientcg.com/)
+15. Armorpaint Cloud https://github.com/armory3d/armortools/tree/main/armorpaint
+
+## Example
+
+1. Arnold Learning Scene (Houdini) https://help.autodesk.com/view/ARNOL/ENU/?guid=arnold_for_houdini_tutorials_ah_Learning_Scenes_html
+2. Animal Logic ALab - USD Production Scene https://dpel.aswf.io/alab/
+3. Render Example Scene https://rmanwiki.pixar.com/display/REN25/Examples
+4. **Link To Open Assets** 
+	1. https://wiki.aswf.io/display/ARW/Links+to+Open+Assets
+	2. https://wiki.aswf.io/display/WGUSD/Sample+Assets
+5. Blender Cloud Libraries https://cloud.blender.org/libraries
 	1. Cloud Gallery https://cloud.blender.org/p/gallery/
 	2. HDRI https://cloud.blender.org/p/hdri
 	3. Textures https://cloud.blender.org/p/textures
 	4. Characters https://studio.blender.org/characters/
-9. Blender Demo Files https://www.blender.org/download/demo-files/
-10. freepoly.org https://www.freepoly.org/en
-11. free3d https://free3d.com/3d-models/
-12. sketchfab https://sketchfab.com/
-13. 3D Scans https://threedscans.com/ - 3D扫描模型
+6. Blender Demo Files https://www.blender.org/download/demo-files/
+7. Nvidia USD Assets https://developer.nvidia.com/usd
+8. **Houdini Content Library** https://www.sidefx.com/contentlibrary/
+9. **mitsuba** - https://mitsuba.readthedocs.io/en/stable/src/gallery.html
+10. McGuire Computer Graphics Archive - https://casual-effects.com/data/
 
+## Learning Materials
+
+1. [https://thebookofshaders.com/?lan=ch](https://thebookofshaders.com/?lan=ch) 关于shader的一本书
+
+# Pixar USD
+
+## 资源
+
+1. 面向PipelineTD的USD生存者指南 https://github.com/LucaScheller/VFX-UsdSurvivalGuide
 # Houdini
 
 [[adv/houdini_hello\|Houdini Hello]]
@@ -221,3 +275,5 @@ https://github.com/JasonMa0012/JTRP
 ## 技术
 
 作者个人对虚幻引擎中的GameplayAbilitySystem（GAS）的理解。[GitHub - tranek/GASDocumentation: My understanding of Unreal Engine 5's GameplayAbilitySystem plugin with a simple multiplayer sample project.](https://github.com/tranek/GASDocumentation)
+
+[https://github.com/UE4-OceanProject/Environment-Project/tree/UE5?tab=readme-ov-file](https://github.com/UE4-OceanProject/Environment-Project/tree/UE5?tab=readme-ov-file) 轻松创建ue5环境
