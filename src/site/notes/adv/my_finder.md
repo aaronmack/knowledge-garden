@@ -179,6 +179,7 @@
 1. 英语外刊杂志，经济学人、纽约客等 [GitHub - hehonghui/awesome-english-ebooks: 经济学人(含音频)、纽约客、卫报、连线、大西洋月刊等英语杂志免费下载,支持epub、mobi、pdf格式, 每周更新](https://github.com/hehonghui/awesome-english-ebooks)
 2. 掘金翻译计划，翻译了很多技术文章。 [GitHub - xitu/gold-miner: 🥇掘金翻译计划，可能是世界最大最好的英译中技术社区，最懂读者和译者的翻译平台：](https://github.com/xitu/gold-miner)
 3. Maspeak是一个学习新语言单词的平台。搭配有图片。[Learn vocabulary in any language !](https://maspeak.com/)
+4. 视频技术讲解（面向开发人员） https://github.com/leandromoreira/digital_video_introduction/blob/master/README-cn.md
 
 # 资源
 
