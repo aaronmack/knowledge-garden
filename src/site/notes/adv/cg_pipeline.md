@@ -2,6 +2,75 @@
 {"dg-publish":true,"permalink":"/adv/cg-pipeline/","title":"CG Pipeline","noteIcon":""}
 ---
 
+# rez
+
+## 前言
+
+针对流程上的工具，可以配置软件环境。例如DCC工具等。可以使用例如`rez-env <package_name>` 配置当前Shell的环境。
+
+## 安装
+
+### 第一步
+
+**via pip**
+
+```bash
+# create virtualenv then install it
+pip install rez
+# config REZ_CONFIG_FILE point to your rezconfig.py
+```
+
+**via source**
+
+```bash
+python ./install.py
+```
+
+### 第二步
+
+安装完成后使用`rez-bind --quickstart` 为现有软件创建rez包。
+
+### 第三步
+
+尝试官方的example。
+
+```bash
+cd example_packages/hello_world
+rez-build --install
+
+# 这会在你的系统里创建一个名为hello_world的包rez-env hello_world进入到这个包的环境中~
+```
+
+## 使用
+
+1. 配置rezconfig.py文件
+
+```bash
+packages_path = [
+    "~/packages",           # locally installed pkgs, not yet deployed
+    "~/.rez/packages/int",  # internally developed pkgs, deployed
+    "~/.rez/packages/ext",  # external (3rd party) pkgs, such as houdini, boost                  
+    "<your_extra_path_here>"
+]
+```
+
+2. 配置第一个包
+
+例如想创建一个关于maya，版本2023环境的包。那么就可以在上述packages_path中的某个目录下，先创建maya（包名）这个文件夹，再创建2023（版本号）这个文件夹，再创建package.py，文件。其内容如下：
+
+```bash
+name = "maya"
+
+version = "2023"
+
+def commands():
+    env.MAYA_UI_LANGUAGE = 'en_US'
+    alias("maya2023", r"C:/Program Files/Autodesk/Maya2023/bin/maya.exe")
+```
+
+> [!INFO] commands函数定义了如何配置当前的环境。
+
+3. 当完成上述配置后，在命令行中使用`rez-env maya`则会配置成功当前环境。
 # CGRU
 
 官方网站：[CGRU](https://cgru.info/)
