@@ -5,6 +5,22 @@
 <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.1fo75js2vjj4.webp" alt="image" width=600/>
 
 # CG
+
+## dreamworksanimation usd-manager
+
+https://github.com/dreamworksanimation/usdmanager
+
+```bash
+# virtualenv
+python310 -m virtualenv venv
+.\venv\scripts\activate
+
+python setup.py install
+pip install PySide2
+
+python .\build\scripts-3.10\usdmanager
+```
+
 ## Openpype
 
 更详细: [[adv/cg_pipeline\|CG Pipeline]]
@@ -23,6 +39,14 @@ $Env:https_proxy = "http://localhost:10809"
 ```
 
 ## Armory
+
+### ArmorCore
+
+```bash
+cd armorcore
+# Unpack `v8\libraries\win32\release\v8_monolithz` using 7-Zip - Extract Here (exceeds 100MB)
+.\Kinc\make.bat -g direct3d11
+```
 
 ### ArmorPaint
 
@@ -47,6 +71,19 @@ cd c:/src/armortools/armorpaint
 [GitHub - armory3d/armory: 3D Engine with Blender Integration](https://github.com/armory3d/armory)
 
 一个游戏引擎，可以在 Blender 中构建游戏。
+
+### ArmorLab
+
+AI驱动的纹理创作工具，图片或文字->贴图。
+
+```bash
+cd armortools/armorlab
+git clone https://github.com/armory3d/onnx_bin onnx
+# Unpack `models.zip` from https://github.com/armory3d/armorai/releases into `Assets/models` using 7-Zip - Extract Here
+
+# Unpack `..\armorcore\v8\libraries\win32\release\v8_monolithz` using 7-Zip - Extract Here (exceeds 100MB)
+..\armorcore\Kinc\make --from ..\armorcore -g direct3d11
+```
 
 ## OpenUSD
 
@@ -553,6 +590,14 @@ LLM可视化 [https://bbycroft.net/llm](https://bbycroft.net/llm)
 李宏毅
 吴恩达 Andrew NG
 
+## 学习路径
+
+1. 10分鐘了解RNN的基本概念 [6AW80qmaAOk]
+2. Let's build GPT： from scratch, in code, spelled out. [kCc8FmEb1nY]
+3. Multitask Learning (C3W2L08) [UdXfsAr4Gjw]
+4. Transfer Learning (C3W2L07) [yofjFQddwHE]
+5. 扩散模型是如何工作的-系列 [oSmlciqXOaU]
+6. PyTorch深度学习框架-龙良曲
 
 ## 应用
 
@@ -571,7 +616,7 @@ LLM可视化 [https://bbycroft.net/llm](https://bbycroft.net/llm)
 
 # (Graphics)
 
-**有哪些概念**
+## 概念
 
 * 场
 	* 标量场 - 符号距离场(SDF)， 密度场(Density Field)， 散度场(描述一点是汇聚还是扩散)
