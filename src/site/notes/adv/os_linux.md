@@ -402,6 +402,119 @@ sudo systemctl restart mongod
 mongosh -u <username> -p <password>
 ```
 
+# Ubuntu22-04 安装postgresql
+
+
+```bash
+# INSTALL postgresql
+
+sudo apt install postgresql
+systemctl status postgresql
+
+nano /etc/postgresql/<version>/main/postgresql.conf
+
+: listen_addresses = '*'
+: port = <new_port>
+
+sudo -u postgres psql template1
+ALTER USER postgres with encrypted password '<password>';
+
+nano /etc/postgresql/<version>/main/pg_hba.conf
+
+: host  all  all 0.0.0.0/0 scram-sha-256
+
+su - postgres
+psql
+
+\l   # list database
+\du  # list users
+drop user IF EXISTS <uasername>;
+create database ayon;
+create user <username> WITH PASSWORD '<password>';
+grant ALL PRIVILEGES ON DATABASE <database> TO <username>;
+alter USER <username> WITH SUPERUSER;
+alter USER <username> WITH NOSUPERUSER;
+alter USER <username> CREATEDB;
+```
+
+# Ubuntu22-04 安装redis
+
+```bash
+# INSTALL redis
+
+sudo apt install lsb-release curl gpg
+
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+
+sudo apt-get update
+sudo apt-get install redis
+systemctl status redis-server
+
+nano /etc/redis/redis.conf
+
+: supervised systemd
+: #bind 127.0.0.1 -::1
+: port <new-port>
+
+# test
+-----
+redis-cli
+ping
+set test "It's working!"
+get test
+exit
+-----
+
+systemctl restart redis-server
+
+# Generate a password (with `openssl rand 60 | openssl base64 -A`)
+
+nano /etc/redis/redis.conf
+
+: requirepass <password>
+
+systemctl restart redis-server
+
+# test
+-----
+redis-cli
+set key1 10
+auth <password>
+set key1 10
+get key1
+quit
+-----
+
+# more secure info: https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04
+
+# ACL
+touch /root/users.acl
+nano /etc/redis/redis.conf
+: aclfile /root/users.acl
+: protected-mode no
+systemctl restart redis-server
+
+-----
+redis-cli
+auth <password>
+
+acl users
+acl whoami
+acl setuser <username>     # 创建
+acl setuser <username> on  # 启用
+acl list
+acl seruser <username> ><password> # 设置密码
+acl setuser <username> <<password> # 取消密码
+acl deluser <username>
+acl cat   # 查看集合
+acl setuser <username> on ><password> allkeys allcommands
+acl setuser <username> on ><password> ~* &* +@all
+
+acl save  # 持久化
+-----
+```
 # SSH禁用密码登录
 
 发现Mongodb数据库被勒索了，虽然里面没有特别重要的数据，但那些关于Pipeline配置就都没有了~ 如果这是生产环境，后果不堪设想，要定期备份，加强安全性~
