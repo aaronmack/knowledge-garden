@@ -28,7 +28,7 @@ https://github.com/TGSAN/CMWTAT_Digital_Edition/releases/tag/2.6.4.0
 
 https://github.com/qtkite/defender-control
 
-> [!WARNING] 在移除时一定要选择Safe的选项，这样可以Rollback。
+> [!WARNING] （windows-defender-remover）在移除时一定要选择Safe的选项，这样可以Rollback。但不知为何，会使默认的windows-cmd变成管理员权限的，这样导致一些软件不能正常使用。
 ## Windows 磁盘映射
 
 有时候你有个WebDAV或者OneDrive，但是Windows自带的磁盘映射似乎很容易卡死，在查找对应的替代方案是，找到了RaiDrive，可以映射很多很多种服务~
@@ -53,7 +53,7 @@ scoop install sudo
 
 还有一个gsudo，不知这两个有何区别。
 
-## Windows下的工具
+## Windows下的开发工具
 
 开发人员的瑞士军刀 [GitHub - veler/DevToys: A Swiss Army knife for developers.](https://github.com/veler/DevToys)
 
@@ -90,7 +90,7 @@ load(io.popen('oh-my-posh init cmd'):read("*a"))()
 
 一个非常好看的Code Style，比起之前只是一片蓝色要好很多。
 
-## Windows文件搜索
+## Windows 文件搜索
 
 Everything - [voidtools](https://www.voidtools.com/)
 Listary - [Listary – File Search & App Launcher](https://www.listary.com/)
@@ -104,7 +104,7 @@ Listary - [Listary – File Search & App Launcher](https://www.listary.com/)
 [IObit Unlocker, Solution for "undelete files or folders" Problems on Windows 8, 7, Vista, XP, 10 - IObit](https://www.iobit.com/en/iobit-unlocker.php)
 
 
-## Windows下的代理
+## Windows 下的代理
 
 Proxifier - https://www.proxifier.com/download/
 
@@ -114,8 +114,101 @@ Proxifier - https://www.proxifier.com/download/
 
 2.Mouse without Borders
  下载网址  https://www.microsoft.com/en-us/download/details.aspx?id=35460 
- 参考视频：[同时操控 2 台电脑，只需一个鼠标和键盘！完全免费，由微软官方提供 | 零度解说 - YouTube](https://www.youtube.com/watch?v=bcsZzhdrccs)
+ 参考视频：[同时操控 2 台电脑，只需一个鼠标和键盘！完全免费，由微软官方提供 | 零度解说 - YouTube](https://www.youtube.com/watch?v=bcsZzhdrccs) 这个鼠标在某些地方上也会消失，比如开始菜单。
 
 ## Windows 开机启动
 
 只需要把快捷方式放到 `%appdata%\Microsoft\Windows\Start Menu\Programs\Startup` 这个目录下，即可。
+
+## Windows 更改文件夹所有者
+
+`<directory> 右键 -> Properties -> Security -> Advanced -> Owner (Change)`
+
+## Windows 下截图工具
+
+1. Snipaste [Snipaste Downloads](https://www.snipaste.com/download.html)
+2. FastStone Capture 
+
+```bash
+FSCapture 10.2:
+
+username: Abuela Juana
+Reg code: KYOQT-RXMFA-GVHKK-TAXPC
+username: J3ud1/YouTube
+Reg Code: GXFQN-RAMXF-RUBND-JNHGA
+username: Mi mama Senayda
+Reg Code: PPDNN-JEEGY-ARPNV-ESMXI
+
+FSCapture 9.9:
+
+username: Free Software 
+Serial: BXRQE-RMMXB-QRFSZ-CVVOX
+```
+
+## Windows 安装Optional features
+
+如果安装的Windows是Pro N版本，是不带Media Feature Pack的，这样在安装Camtasia录屏软件时会出错。
+安装Media Feature Pack，在Windows设置 -> Apps -> Optional features -> Add a feature (搜索 Media Feature Pack)。
+
+> [!NOTE] 如果不显示需要使用Administrator启动cmd，执行`sfc /scannow`如果这个命令执行失败，则可能是服务被关闭，需要执行`sc config trustedinstaller start= auto`再执行`net start trustedinstaller` , 再去执行sfc。参考[sfc /scannow "Windows Resource Protection could not start the repair service"](https://answers.microsoft.com/en-us/windows/forum/all/sfc-scannow-windows-resource-protection-could-not/3dabeaa4-269d-4c65-ab42-a3cf5ef1092d)
+
+
+## Windows下比较两份(多份)文件(目录)不同
+
+WinMegre。比较文件内容不同，比较目录不同。堪称神器。
+
+## Windows 下任务栏统计数据显示
+
+开源的小工具可以在任务栏显示当前网速，CPU使用率等等[Taskbar Stats is an open source tool that displays your computer's resource usage on the Windows Taskbar - gHacks Tech News](https://www.ghacks.net/2020/11/30/taskbar-stats-is-an-open-source-tool-that-displays-your-computers-resource-usage-on-the-windows-taskbar/)好像只支持Win10且已经不更新了。
+
+## Windows 常用命令
+
+```bash
+## List All Shares
+net share
+ 
+## Stop Sharing a Folder
+net share sharename /delete
+```
+
+# Windows下的常用软件代理
+
+pip: `%APPDATA%\pip\pip.ini` 
+
+```bash
+[global]
+proxy = http://user:password@proxy_name:port
+```
+
+git: `C:\Users\<username>\.gitconfig`
+
+```bash
+[http]
+	proxy = http://127.0.0.1:10809
+[https]	
+	proxy = http://127.0.0.1:10809
+```
+
+npm:
+
+```bash
+# 设置代理
+npm config set proxy=http://<server>:<port>
+npm config set registry=http://registry.npmjs.org
+npm config set https-proxy http://<server>:<port>
+
+# 移除代理
+npm config delete proxy
+npm config delete https-proxy
+```
+# Windows CMD 中文显示
+
+在CMD的顶部空白处右键，打开属性，选择字体，在字体选项栏中，将默认字体(我这里是`Consoles`)改为`KaiTi`，就可以显示中文了。
+
+# Windows 设置系统级别代理
+
+软件Proxifier可以做到程序级别，像Google浏览器插件Proxy SwitchySharp做到浏览器级别的代理。系统级别可以做到底层的代理，虽然不知道下方的设置是否正确，但起到了效果。
+
+控制面板 -> Internet Options -> Connections -> Proxy server
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.7cx1k4pe9fgg.webp" alt="image" width=600/>

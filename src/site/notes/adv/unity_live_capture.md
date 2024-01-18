@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/adv/unity-live-capture/","title":"Unity Live Capture","noteIcon":""}
+{"dg-publish":true,"permalink":"/adv/unity-live-capture/","title":"Unity Live Capture","tags":["unity"],"noteIcon":""}
 ---
 
 ## 提要

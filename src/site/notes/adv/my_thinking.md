@@ -4,6 +4,15 @@
 
 # 阅读
 
+> [从零开始的预积分次表面散射 - 知乎](https://zhuanlan.zhihu.com/p/444091986)
+> tql
+
+> [视频 - 微博 - 饺子小品](https://h5.video.weibo.com/show/1034:4972031910019137)
+> 其中有一评论，说终于明白为什么有人能听懂宝可梦说话了，这里面所讲的小品真的很似曾相识，就像是一种模板。我想，这就是一种意识形态的灌输吧，这种灌输不论好坏，无非是想要灌输什么东西。
+
+> [不把人当人，就是恶](https://mp.weixin.qq.com/s/WBtcWNuUQFf1cV51RiSLmw)
+> 把人不当人，就是恶，从这个角度去理解恶似乎是可以的，还可以补充一下，把任何事物不当事物，也是一种恶。对于人，只去考虑"是否有用"，"是否有价值"，这就是把人往工具的角度去思考，这会形成一种思维链，在他人角度，也会去思考你本身的"价值","有用"程度，这会造成"恶"的传播。
+
 > [关于彩票的一些基本常识](https://mp.weixin.qq.com/s/cyTMKk55zsBPs72saqstlw)
 > 彩票不是赌博，它比赌博黑多了。不管你玩什么项目，你进去的那一刻起，就已经在输钱了。
 
@@ -98,3 +107,8 @@
 
 > [NixOS](https://github.com/ryan4yin/nixos-and-flakes-book)
 > 声明式系统，任意回滚，感觉很不错。
+
+
+> [Transformer - YouTube](https://www.youtube.com/watch?v=ugWDIIOHtPA&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4&index=61)
+> 在看Transformer视频时，下面这张图中，机器两次都学习到了`it`所指示的含义。
+> <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702299321458.webp" alt="1702299321458" width=500/>
