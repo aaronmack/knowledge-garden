@@ -117,6 +117,7 @@
 26. cpix2tex - LaTeX OCR 识别图片的Latex数学公式，需要搭配一个截图工具，截图后复制到memory中，安装`pip install "pix2tex[gui]"` 最好是有个虚拟环境 [GitHub - lukas-blecher/LaTeX-OCR: pix2tex: Using a ViT to convert images of equations into LaTeX code.](https://github.com/lukas-blecher/LaTeX-OCR)
     <img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/1702310448042.webp" alt="1702310448042" width=500/>
 27. 调色板软件 [GitHub - eigenmiao/Rickrack: Generate harmonious colors freely.](https://github.com/eigenmiao/Rickrack)
+28. 图像查看器用 Rust 编写(简约跨平台) https://github.com/woelper/oculante
 
 
 ## AI相关
