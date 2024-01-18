@@ -6,7 +6,7 @@
 
 # CG
 
-## dreamworksanimation usd-manager
+## dreamworks animation (DWA) usd-manager
 
 https://github.com/dreamworksanimation/usdmanager
 
