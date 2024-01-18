@@ -204,3 +204,11 @@ npm config delete https-proxy
 # Windows CMD 中文显示
 
 在CMD的顶部空白处右键，打开属性，选择字体，在字体选项栏中，将默认字体(我这里是`Consoles`)改为`KaiTi`，就可以显示中文了。
+
+# Windows 设置系统级别代理
+
+软件Proxifier可以做到程序级别，像Google浏览器插件Proxy SwitchySharp做到浏览器级别的代理。系统级别可以做到底层的代理，虽然不知道下方的设置是否正确，但起到了效果。
+
+控制面板 -> Internet Options -> Connections -> Proxy server
+
+<img src="https://cdn.jsdelivr.net/gh/aaronmack/image-hosting@master/e/image.7cx1k4pe9fgg.webp" alt="image" width=600/>
