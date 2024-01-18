@@ -62,12 +62,15 @@ docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 ## Port forwarding
 
 ```bash
-
 # 端口转发 虚拟机->宿主机
-wsl -- ifconfig eth0
+
+wsl -- ifconfig eth0  # 外部调用命令获取wsl的ip (! 注意必须要先set-default是Ubuntu才行)
+
 # netsh interface portproxy add v4tov4 listenport=[win10端口] listenaddress=0.0.0.0 connectport=[虚拟机的端口] connectaddress=[虚拟机的ip]
-netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=172.24.107.115
+netsh interface portproxy add v4tov4 listenport=8080 listenaddress=0.0.0.0 connectport=8080 connectaddress=<ip>
+
 netsh interface portproxy show all
+
 netsh interface portproxy delete v4tov4 listenport=8080 listenaddress=0.0.0.0
 
 # 获得宿主机 IP
@@ -76,6 +79,12 @@ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 hostname -I | awk '{print $1}'
 ```
 
+## root login default
+
+```bash
+# 用everything搜索ubuntu2204.exe，注意需要是WindowsApps下面的,例如我的
+C:\Users\<your-username>\AppData\Local\Microsoft\WindowsApps\ubuntu2204.exe config --default-user root
+```
 ## Fix Broken Package
 
 ```bash
@@ -198,3 +207,16 @@ https://github.com/nufeng1999/WSL_GNOME
 
 https://github.com/neutrinolabs/xrdp
 
+
+## WSL2 Docker Desktop Memory Limit
+
+Create  `%UserProfile%\.wslconfig` if not exists. then edit it.
+
+```bash
+[wsl2]
+memory=8GB
+```
+
+```
+ wsl --shutdown
+```
