@@ -21,7 +21,187 @@ pip install PySide2
 python .\build\scripts-3.10\usdmanager
 ```
 
-## Openpype
+## AYON
+
+### AYON Frontend
+
+```bash
+REM
+REM ayon-frontend
+REM If you don,t have yarn, you can install it by `npm install -g yarn`
+REM
+
+cd C:\src\ayon\ayon-frontend
+
+yarn install
+yarn build
+```
+
+### AYON launcher
+
+```powershell
+#
+# ayon-launcher
+# 1. On Windows, You need install iscc.exe by scoop install inno-setup
+# 2. python39 -m virtualenv ./venv
+# 
+
+cd c:\src\ayon\ayon-launcher
+
+# proxy setup if needed.
+
+.\venv\scripts\activate
+
+./tools/manage.ps1 create-env
+./tools/manage.ps1 install-runtime-dependencies
+./tools/manage.ps1 build
+./tools/manage.ps1 make-installer
+```
+
+### AYON Dependencies Tools
+
+```bash
+# 创建.env文件, 这个apiKey是从项目文件，找一张有图片的，在浏览器按F12，定位元素到这种图片，在url中会显示token，将token填入下方
+: AYON_API_KEY=
+: AYON_SERVER_URL=http://<addr>:<port>
+
+cd C:\src\ayon\ayon-dependencies-tool
+
+# Change python version same as your project, for me for now, it's python3.9.13, my system has 3 versions of python, 3.9,3.10,3.11, and installed by scoop, commonly I use virtualenv, but I removed the default scoop-shims of python.exe,python3.exe, and only keep the python39,python310,python311 on my system.
+
+.\start.ps1 install
+.\start.ps1 create -b <bundle_name>
+```
+
+### AYON addons
+
+```bash
+# from self
+# 1. use https://github.com/ynput/ayon-addon-template to create your own addon or clone the official addon repository
+# 2. create a python virtualenv that version compatibility with your project (for now 24.01.17, needs python3.9.13), after create it, activate it. then run
+poetry run python create_package.py
+```
+
+```bash
+# from openpype (all)
+cd c:\src\ayon\openpype
+./.poetry/bin/poetry run python ./server_addon/create_ayon_addons.py
+```
+
+### AYON Documentation
+
+```bash
+# Install yarn if needed
+# npm install -g yarn
+yarn add docusaurus --dev
+cd website
+yarn start
+```
+
+### AYON Docker
+
+#### (for windows Docker Desktop) - **Recommand**
+
+```powershell
+# powershell
+cd C:\src\ayon\ayon-docker
+
+# If you have one, you can speed it up
+$env:http_proxy = "http://localhost:10809"
+$env:https_proxy = "http://localhost:10809"
+
+# from template.json to server
+#  exection only once need.
+.\manage.ps1 setup
+
+# Use official docker image
+.\manage.ps1 update
+
+# build whole things (from local)
+.\manage.ps1 build
+```
+
+### AYON Backend
+
+#### (for windows WSL)
+
+```bash
+#!/bin/bash
+
+# Windows (WSL)
+
+#
+# On Windows (Outside WSL) - Port Forward
+# - Use `wsl -- ifconfig eth0` get wsl-ip, then:
+# netsh interface portproxy add v4tov4 listenport=5000 listenaddress=0.0.0.0 connectport=5000 connectaddress=<wsl-ip>
+# netsh interface portproxy show all
+# netsh interface portproxy delete v4tov4 listenport=5000 listenaddress=0.0.0.0
+#
+
+#
+# On WSL - Install Project (user environment, root is ok.)
+# - If you have better network for pip, You don't need this line.
+# export http_proxy=http://<address>:<port>
+# export https_proxy=http://<address>:<port>
+# pip install -U pip
+# pip install poetry
+# poetry config virtualenvs.create false
+# python3 -m virtualenv /home/<user>/venv-ayon
+# source /home/<user>/venv-ayon/bin/activate
+# cd /mnt/c/src/ayon/ayon-backend
+# poetry install --no-interaction --no-ansi
+#
+
+#
+# On noth (Manual)
+# - Windows
+# wsl --shutdown -d Ubuntu-22.04
+# wsl -d Ubuntu-22.04
+# - WSL (ayon.pid, backend-server need, for non-root user only.)
+# sudo touch /var/run/ayon.pid
+# sudo chown <user> /var/run/ayon.pid
+#
+
+#
+# ! Need yarn build frontend first.
+#
+
+# sh /mnt/c/src/ayon/ayon-backend.sh
+
+. /home/<user>/venv-ayon/bin/activate
+
+echo <password> | sudo -S touch /var/run/ayon.pid
+echo <password> | sudo -S chown <user> /var/run/ayon.pid
+
+# host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+# export ALL_PROXY="http://$host_ip:<port>"
+
+export AYON_postgres_url=postgres://<username>:<password>@<addr>:<port>/ayon
+export AYON_redis_url=redis://<username>:<password>@<addr>:<port>
+
+export AYON_frontend_dir=/mnt/c/src/ayon/ayon-frontend/dist
+export AYON_addons_dir=/mnt/c/src/ayon/ayon-addons/dist
+export AYON_log_file=/mnt/c/src/ayon/log-backend.log
+export AYON_SETTINGS_TEMPLATE=/mnt/c/src/ayon/template.json
+export AYON_force_create_admin=1
+export AYON_auth_pass_pepper=<secure_password>
+
+export PYTHONBUFFERED=1
+export LOGLEVEL=info
+
+cd /mnt/c/src/ayon/ayon-backend
+
+gunicorn \
+  -k uvicorn.workers.UvicornWorker \
+  --log-level ${LOGLEVEL} \
+  --timeout 120 \
+  -b :5000 \
+  ayon_server.api.server:app
+```
+
+
+
+### AYON Openpype (Deprecated)
 
 更详细: [[adv/cg_pipeline\|CG Pipeline]]
 
@@ -357,9 +537,34 @@ Install and Upgrade
 ```bash
 python -m pipx install poetry
 python -m pipx upgrade poetry
+
+# Or
+# create virtualenv, then (Recommand)
+pip install poetry
+
+# Or
+
+pip install pipx
+pipx install poetry
+pipx upgrade poetry
 ```
 
 ## (Version Control)
+
+
+1. gitbucket
+
+```bash
+scoop bucket add java
+scoop install temurin11-jdk
+
+set GITBUCKET_PORT=12122
+set GITBUCKET_HOST=0.0.0.0
+set GITBUCKET_HOME=<your_data_path> # The default is $HOME/gitbucket
+java -jar gitbucket.war
+```
+
+https://github.com/gitbucket/gitbucket
 
 1. git
 2. SnowFS
@@ -397,6 +602,8 @@ svn revert --recursive .
 
 Mongosh - https://www.mongodb.com/try/download/compass
 Mysqlsh - https://dev.mysql.com/downloads/shell/
+
+for database install on Linux, see [[adv/os_linux\|OS-Linux]]
 
 ## (Cloud Services)
 
