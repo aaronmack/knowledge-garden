@@ -2,6 +2,20 @@
 {"dg-publish":true,"permalink":"/adv/cg-pipeline/","title":"CG Pipeline","noteIcon":""}
 ---
 
+# AYON
+
+OpenPype将会在24年开始逐步变成AYON的一部分。变为core模块。
+
+Windows下开始使用docker部署，要方便许多。总来说，现在分为一个backend (server) 和frontend 前端页面，以及一个launcher和许多的addons。
+
+首先部署的是服务，可以在下面的链接中根据ayon-docker中写的命令去安装。它会同时在docker容器中装好所需要的部件。(数据库，frontend，backend)。
+
+此时就可以去浏览器页面默认为(localhost:5000)，去配置项目。
+
+本地部署需要自己构建launcher，并上传到backend中去。构建的方式参考下面的链接。
+
+关于安装上的一些命令，可以在这里找到。[[adv/my_develop#AYON\|Develop AYON]]
+
 # rez
 
 ## 前言
@@ -144,7 +158,9 @@ start.cmd
 
 上面的只是非常非常简单的配置与使用。更深入的使用还是要仔细查看它的文档。在这里 https://cgru.readthedocs.io/en/latest/index.html
 
-# OpenPype
+# OpenPype (Deprecated) 
+
+>[!WARN] 现在openpype已经成为AYON-Core，见 [[adv/cg_pipeline#AYON\|AYON]]
 
 ## 写到前面
 
