@@ -7,8 +7,18 @@
 
 ## Pipeline
 
-1. **Openpype** 开源的管道工具。
-2. **cgru** 更详细: [[adv/cg_pipeline\|CG Pipeline]] CGRU 是计算机图形工具包。其中Afanasy是一个渲染场管理器。 Rules 是一个CG 项目跟踪器。
+2. AYON
+	1. AYON core (Openpype) 开源的管道工具。
+	2. AYON Backend
+	3. AYON Frontend
+	4. Addons
+	5. Components
+3. **cgru** 更详细: [[adv/cg_pipeline\|CG Pipeline]] CGRU 是计算机图形工具包。其中Afanasy是一个渲染场管理器。 Rules 是一个CG 项目跟踪器。
+4. Ramses 生产管理系统。 [Ramses](https://github.com/RxLaboratory/Ramses)
+5. Anima - VFX和动画管道库。 [anima](https://github.com/eoyilmaz/anima) 同时与[stalker](https://github.com/eoyilmaz/stalker)搭配使用，内部工作室的工具。
+6. Prism Pipeline工具社区版。[GitHub - PrismPipeline/Prism: Prism Pipeline](https://github.com/PrismPipeline/Prism)
+7. kabaret 制作跟踪，资产管理，管道流程的工具。 https://gitlab.com/kabaretstudio/kabaret
+8. cgwire - **Kitsu** - 项目协作管理。
 
 ## Matchmove
 
@@ -55,7 +65,7 @@
 9. VRay
 10. Redshift
 11. Mitsuba - 面向研究性质的，正向和反向光传输模拟渲染系统。可微分的渲染器。
-12. Radeon ProRender - AMD开发的物理渲染引擎。
+12. **Radeon ProRender** - AMD开发的物理渲染引擎。
 
 ## Blender
 
@@ -64,10 +74,13 @@
 3. **Capsule** - https://github.com/Takanu/Capsule 批量导出Blender中的场景内容。
 4. BlenderGIS - https://github.com/domlysz/BlenderGIS 导入geographic地理数据。
 5. Rigify - CloudRig - 自动绑定的功能集包。 [Blender / CloudRig · GitLab](https://gitlab.com/blender/CloudRig)
-## awesome 系列
+## awesome
 
-1. [GitHub - cgwire/awesome-cg-vfx-pipeline: List of open-source technologies that help in the process of building a pipeline for CG and VFX productions](https://github.com/cgwire/awesome-cg-vfx-pipeline)
-2. [GitHub - agmmnn/awesome-blender: 🪐 A curated list of awesome Blender addons, tools, tutorials; and 3D resources for everyone.](https://github.com/agmmnn/awesome-blender)
+1. CG VFX Pipeline [GitHub - cgwire/awesome-cg-vfx-pipeline: List of open-source technologies that help in the process of building a pipeline for CG and VFX productions](https://github.com/cgwire/awesome-cg-vfx-pipeline)
+
+## Storage
+
+1. FreeNAS
 
 # CG Assets
 
@@ -115,7 +128,18 @@
 ## 资源
 
 1. 面向PipelineTD的USD生存者指南 https://github.com/LucaScheller/VFX-UsdSurvivalGuide
+
+# Blender
+
+## 资源
+
+2. Blender - [GitHub - agmmnn/awesome-blender: 🪐 A curated list of awesome Blender addons, tools, tutorials; and 3D resources for everyone.](https://github.com/agmmnn/awesome-blender)
+
 # Houdini
+
+## 资源
+
+1. Houdini - [GitHub - wyhinton/AwesomeHoudini: A collection of awesome Free/Open Source things regarding the SideFx Houdini ecosystem.](https://github.com/wyhinton/AwesomeHoudini)
 
 [[adv/houdini_hello\|Houdini Hello]]
 
